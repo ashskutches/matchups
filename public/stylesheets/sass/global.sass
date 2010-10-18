@@ -1,0 +1,1017 @@
+/*
+ *Theme Name: Titanium Folio
+ *Description: Professional Showcase Theme
+ *Author: Marius Pop
+ *Version: 1.0
+
+/* =Reset default browser CSS.
+ *--------------------------------------------------------------
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  font-size: 100%
+  vertical-align: baseline
+  background: transparent
+
+body
+  line-height: 1
+
+html
+  overflow-y: scroll
+  overflow-x: hidden
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+/* remember to define focus styles!
+
+\:focus
+  outline: 0
+
+/* remember to highlight inserts somehow!
+
+ins
+  text-decoration: none
+
+del
+  text-decoration: line-through
+
+/* tables still need 'cellspacing="0"' in the markup
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+a img, input[type="text"], textarea
+  border: none
+
+/* =Fonts
+ *--------------------------------------------------------------
+
+body, input, textarea, .page-title span, .pingback a.url
+  font-family: Verdana, Helvetica, sans-serif
+
+h3
+  &#comments-title, &#reply-title
+    font-family: Verdana, Helvetica, sans-serif
+
+#access
+  .menu, div.menu ul
+    font-family: Verdana, Helvetica, sans-serif
+
+#cancel-comment-reply-link, .form-allowed-tags, #site-info, #site-title, #wp-calendar, .comment-meta
+  font-family: Verdana, Helvetica, sans-serif
+
+.comment-body
+  tr th, thead th
+    font-family: Verdana, Helvetica, sans-serif
+
+.entry-content
+  label, tr th, thead th
+    font-family: Verdana, Helvetica, sans-serif
+
+.entry-meta, .entry-title, .entry-utility, #respond label, .navigation, .page-title, .pingback p, .reply, .widget-title, .wp-caption-text, .normal-font
+  font-family: Verdana, Helvetica, sans-serif
+
+blockquote
+  font-size: 14px
+
+pre
+  font: Consolas,"Courier New",Courier,monospace
+  line-height: 18px
+  font-size: 13px
+  padding: 18px 5px
+
+code
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace
+  padding: 1px 3px
+  margin-bottom: 15px
+  display: inline-block
+
+/* =Global Elements
+ *--------------------------------------------------------------
+
+body, input, textarea
+  color: #666
+  font-size: 12px
+  line-height: 18px
+
+.floatLeft
+  float: left
+
+.floatRight
+  float: right
+
+.clearfloat
+  clear: both
+  height: 0px
+  font-size: 1px
+
+hr
+  border: 0
+  height: 1px
+  margin-bottom: 18px
+  clear: both
+
+/* Text elements
+
+p
+  margin-bottom: 18px
+
+h1, h2, h3, h4, h5, h6
+  font-weight: normal
+  clear: both
+
+h1
+  font-size: 80px
+
+h2
+  font-size: 30px
+
+h3
+  font-size: 25px
+
+h4
+  font-size: 20px
+
+h5
+  font-size: 18px
+
+h6
+  font-size: 16px
+
+ul
+  list-style: square
+  margin: 0 0 18px 1.5em
+
+ol
+  list-style: decimal
+  margin: 0 0 18px 1.5em
+  ol
+    list-style: upper-alpha
+    ol
+      list-style: lower-roman
+      ol
+        list-style: lower-alpha
+
+ul ul, ol ol, ul ol, ol ul
+  margin-bottom: 0
+
+dl
+  margin: 0 0 24px 0
+
+dt
+  font-weight: bold
+
+dd
+  margin-bottom: 18px
+
+strong
+  font-weight: bold
+
+cite, em, i
+  font-style: italic
+
+big
+  font-size: 131.25%
+
+ins
+  text-decoration: none
+
+blockquote
+  quotes: none
+  font-style: italic
+  margin: 0 0 18px 4px
+  padding: 0 16px
+  cite, em, i
+    font-style: normal
+
+abbr, acronym
+  cursor: help
+
+sup, sub
+  height: 0
+  line-height: 1
+  vertical-align: baseline
+  position: relative
+
+sup
+  bottom: 1ex
+
+sub
+  top: .5ex
+
+input[type="text"], textarea
+  padding: 5px
+
+/* Text meant only for screen readers
+
+.screen-reader-text
+  position: absolute
+  left: -9000px
+
+/* Bulleted lists
+
+.bullet-check li, .bullet-gray li, .bullet-silver li, .bullet-blue li, .bullet-green li, .bullet-orange li, .bullet-red li, .bullet-disc-gray li, .bullet-disc-silver li, .bullet-disc-blue li, .bullet-disc-green li, .bullet-disc-orange li, .bullet-disc-red li
+  list-style-type: none
+  padding-left: 20px
+
+/* Numbered lists
+
+ol
+  &.number-pad
+    padding: 3px 5px 5px 32px
+    li
+      padding-left: 10px
+  padding-left: 32px
+
+ol	li
+  padding-left: 10px
+
+/* Table style
+ *--------------------------------------------------------------
+
+#tableLayout
+  font-size: 12px
+  padding: 25px 0
+  th.tableColumn
+    border-style: solid
+    border-width: 1px 1px 0
+    text-align: center
+  td
+    &.tableItem, &.tableOdd, &.tableEven
+      border-style: solid
+      border-width: 1px 1px 0
+      text-align: center
+  th .th_title
+    font-size: 20px
+    margin-top: 11px
+    margin-bottom: 0px
+    display: block
+  .tableColumn	a
+    display: block
+    font-size: 11px
+    margin-bottom: 5px
+  .tableItem
+    padding: 15px 0
+    width: 200px
+  td
+    width: 150px
+
+/* =Structure
+ *--------------------------------------------------------------
+/* Header
+ *--------------------------------------------------------------
+
+#header
+  height: 91px
+
+.header-content
+  margin: 0 auto
+  width: 980px
+  position: relative
+
+.logo
+  float: left
+
+#site-title
+  float: left
+  margin: 0 0 18px 0
+  width: 700px
+  font-size: 30px
+  line-height: 36px
+
+#site-description
+  clear: right
+  float: right
+  font-style: italic
+  margin: 14px 0 18px 0
+  width: 220px
+
+.buy_theme
+  position: absolute
+  top: 92px
+  z-index: 10
+
+/* The main theme structure
+
+#wrapper
+  margin: 0 auto
+  width: 980px
+  position: relative
+
+.page_content
+  width: 940px
+  padding: 20px
+
+/* Layout columns
+ *--------------------------------------------------------------
+
+.col1, .col2, .col3, .col4, .col32
+  display: inline
+  float: left
+  position: relative
+  margin: 0 10px
+  overflow: hidden
+  padding-bottom: 20px
+
+.col1
+  width: 940px
+
+.col2
+  width: 450px
+
+.col32
+  width: 610px
+
+.col3
+  width: 290px
+
+.col4
+  width: 215px
+
+/* Right sidebar
+ *--------------------------------------------------------------
+
+.content_left
+  width: 620px
+  margin-right: 20px
+  float: left
+
+.sidebar_right
+  width: 280px
+  float: left
+  padding-left: 20px
+  fieldset
+    padding-bottom: 15px
+    margin-bottom: 15px
+
+/* Left sidebar
+ *--------------------------------------------------------------
+
+.content_right
+  width: 620px
+  margin-left: 20px
+  float: left
+
+.sidebar_left
+  width: 280px
+  float: left
+  padding-right: 20px
+  fieldset
+    padding-bottom: 15px
+    margin-bottom: 15px
+
+/* Page header
+ *--------------------------------------------------------------
+
+.page_header
+  position: relative
+  width: 980px
+  height: 95px
+  margin-bottom: 10px
+
+.page_header	h1
+  font-size: 80px
+  width: 440px
+  overflow: hidden
+  display: block
+  position: absolute
+  top: 17px
+  left: 275px
+
+.page_header	h2
+  font-size: 22px
+  width: 250px
+  overflow: hidden
+  display: block
+  position: absolute
+  right: 15px
+  top: 17px
+  text-align: right
+
+/* Breadcrumb
+ *--------------------------------------------------------------
+
+.breadcrumb
+  width: 980px
+  margin-bottom: 10px
+
+.breadcrumb	ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.breadcrumb	li
+  float: left
+
+/* Sort nav
+ *--------------------------------------------------------------
+
+.sort-nav
+  width: 980px
+  height: 38px
+  text-align: center
+  margin-bottom: 20px
+
+.sort-nav	ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+  padding: 10px
+  li
+    display: inline-block
+    margin: 0
+    padding: 0
+  li	a
+    font-size: 22px
+    text-decoration: none
+    margin: 0
+    padding: 0
+    padding: 0 10px
+
+/* Structure the footer area
+ *--------------------------------------------------------------
+
+#footer
+  padding: 10px
+
+#footer.copyright
+  float: left
+  width: 300px
+
+#footer
+  &.social
+    float: right
+    width: 600px
+  .social	ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    float: right
+  .social li
+    float: left
+    margin-left: 5px
+
+/* =Content
+ *--------------------------------------------------------------
+
+/* Main menu
+ *--------------------------------------------------------------
+
+#access
+  display: block
+  float: right
+  .menu-header
+    font-size: 20px
+    width: 680px
+    position: relative
+    top: 53px
+
+div.menu
+  font-size: 20px
+  width: 680px
+  position: relative
+  top: 53px
+
+#access .menu-header ul, div.menu ul
+  list-style: none
+  margin: 0
+  float: right
+
+#access .menu-header li, div.menu li
+  float: left
+  position: relative
+
+#access
+  a
+    display: block
+    text-decoration: none
+    padding: 0 15px
+    line-height: 38px
+  ul
+    ul
+      display: none
+      position: absolute
+      top: 38px
+      left: 0
+      float: left
+      width: 180px
+      z-index: 99999
+      font-size: 12px
+      text-transform: uppercase
+      li
+        min-width: 180px
+      ul
+        left: 100%
+        top: 0
+      a
+        height: auto
+        line-height: 1em
+        padding: 10px
+        width: 160px
+    li:hover > ul
+      display: block
+
+/* Sidebar
+ *--------------------------------------------------------------
+
+.widget_search #s
+  float: left
+  width: 178px
+  padding: 6px 5px 6px
+
+.search_btn
+  width: 90px
+  height: 30px
+  display: inline-block
+  text-indent: -999999px
+  float: left
+
+.categories
+  list-style-type: none
+  margin: 0
+  padding: 0
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    margin-left: 20px
+  padding-bottom: 15px
+  margin-bottom: 15px
+  border-bottom: 1px solid #232323
+
+/* Homepage
+ *--------------------------------------------------------------
+/* Featured content
+ *--------------------------------------------------------------
+
+#loopedSlider
+  margin-top: 50px
+  position: relative
+
+.container
+  width: 980px
+  height: 410px
+  overflow: hidden
+  position: relative
+  cursor: pointer
+
+.slides
+  position: absolute
+  .slide
+    position: absolute
+    top: 0
+    width: 980px
+    display: none
+
+.info_slide	h1
+  font-size: 30px
+  margin: 0
+  margin-bottom: 10px
+
+.info_slide	p
+  font-size: 14px
+
+.more_btn
+  width: 180px
+  height: 46px
+  display: block
+  text-indent: -999999px
+
+.slide1, .slide2
+  height: 410px
+
+.slide3
+  height: 410px
+  width: 980px
+  position: relative
+
+.slide1
+  .content_slide
+    float: left
+    margin: 21px 0 0 6px
+  .info_slide
+    float: right
+    width: 300px
+    margin: 20px 10px 0 0
+
+.slide2
+  .content_slide
+    float: right
+    margin: 21px 39px 0 0px
+  .info_slide
+    float: left
+    width: 300px
+    margin: 20px 10px 0 0
+
+.slide3
+  .content_slide
+    margin: 20px 0px 0 37px
+  .info_slide
+    width: 600px
+    margin-top: 25px
+    position: absolute
+    right: 0
+  .info_slide	h1
+    position: absolute
+    right: 250px
+    width: 730px
+    overflow: hidden
+  .info_slide	p
+    position: absolute
+    right: 250px
+    width: 730px
+    top: 30px
+    overflow: hidden
+  .info_slide .more_btn
+    position: absolute
+    right: 0
+
+.slider-nav
+  position: absolute
+  top: -28px
+  right: 0
+
+ul.pagination
+  list-style-type: none
+  margin: 0
+  padding: 0
+  margin-right: 50px
+  li
+    float: left
+  a
+    display: block
+    width: 22px
+    height: 22px
+    text-indent: -999999px
+    outline: none
+
+.previous
+  position: absolute
+  right: 20px
+  display: block
+  width: 22px
+  height: 22px
+  text-indent: -999999px
+  outline: none
+
+.next
+  position: absolute
+  right: 0
+  display: block
+  width: 22px
+  height: 22px
+  text-indent: -999999px
+  outline: none
+
+/* 3D slider
+
+#piecemaker
+  margin-top: 60px
+
+/* Homepage content
+ *--------------------------------------------------------------
+
+#home-content
+  padding-top: 20px
+  margin-top: 20px
+  .item1, .item2, .item3
+    margin-bottom: 15px
+    width: 225px
+    padding-left: 80px
+
+#home-content	p
+  margin-bottom: 0px
+
+/* Portfolio
+ *--------------------------------------------------------------
+
+.gallery
+  width: 940px
+  margin-bottom: 20px
+
+.work_gallery
+  list-style-type: none
+  margin: 0
+  padding: 0
+  li
+    float: left
+    width: 275px
+    height: 180px
+    margin: 0px 9px 28px 9px
+    position: relative
+    padding: 10px
+    .image
+      cursor: pointer
+      position: absolute
+      top: 10px
+      left: 10px
+      z-index: 1
+    &.last
+      margin-right: 0
+    &.open .image
+      height: 255px
+      width: 330px
+      top: -28px
+      left: -18px
+      z-index: 999
+    .hover
+      position: absolute
+      bottom: 0
+      right: 0
+      display: block
+      width: 40px
+      height: 40px
+      cursor: pointer
+      z-index: 2
+    .text
+      display: none
+      position: absolute
+      height: 216px
+      width: 291px
+      z-index: 1000
+      overflow: hidden
+      padding: 20px
+    &.open .text
+      display: block
+      top: -28px
+      left: -18px
+    .text	h2
+      font-size: 25px
+    .text.desc
+      line-height: 16px
+      font-size: 12px
+      margin-bottom: 7px
+      height: 50px
+      overflow: hidden
+    .text	p
+      line-height: 14px
+      font-size: 11px
+      margin-bottom: 7px
+    .text
+      .highlight
+        display: inline-block
+        font-size: 22px
+        padding: 5px 5px 0 5px
+      .small
+        font-size: 14px
+        padding: 3px 3px 1px 3px
+
+/* portfolio item
+
+.page_content.screenshot
+  float: left
+  width: 613px
+
+.page_content.item_details
+  float: right
+  width: 300px
+  overflow: hidden
+
+.page_content.item_details .highlight
+  display: inline-block
+  font-size: 22px
+  padding: 5px 5px 0 5px
+
+.page_content.item_details .small
+  font-size: 14px
+  padding: 3px 3px 1px 3px
+
+.preview_btn, .details_btn
+  width: 120px
+  height: 40px
+  display: inline-block
+  text-indent: -999999px
+
+/* Blog page
+ *--------------------------------------------------------------
+
+.blogPostSummary
+  margin-bottom: 20px
+
+.postmetadata
+  margin-bottom: 15px
+  font-size: 11px
+
+.postmetadata	ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.postmetadata.blogpost_info
+  float: left
+
+.postmetadata.blogpost_comments
+  float: right
+
+.blog_nav
+  margin-bottom: 20px
+
+.blog_nav	ul
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+.blog_nav.previous
+  position: static
+  display: block
+  text-indent: 25px
+  font-size: 25px
+  text-decoration: none
+  padding-top: 3px
+
+.blog_nav.next
+  position: static
+  display: block
+  text-indent: 0
+  text-indent: -42px
+  font-size: 25px
+  text-decoration: none
+  padding-top: 3px
+
+/* Comments
+ *--------------------------------------------------------------
+
+#comments
+  clear: both
+  .navigation
+    padding: 0 0 18px 0
+
+h3
+  &#comments-title, &#reply-title
+    margin-bottom: 0
+  &#comments-title
+    padding: 24px 0
+
+.commentlist
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    &.comment
+      line-height: 18px
+      margin: 0 0 24px 0
+      padding: 15px 0 0px 56px
+      position: relative
+    &:last-child
+      border-bottom: none
+      margin-bottom: 0
+
+#comments .comment-body
+  ul, ol
+    margin-bottom: 18px
+  p:last-child
+    margin-bottom: 6px
+  blockquote p:last-child
+    margin-bottom: 24px
+
+.commentlist
+  ol
+    list-style: decimal
+  .avatar
+    position: absolute
+    top: 20px
+    left: 0
+
+.comment-author
+  cite
+    color: #000
+    font-style: normal
+    font-weight: bold
+  .says
+    font-style: italic
+
+.comment-meta
+  font-size: 12px
+  margin: 0 0 18px 0
+  a
+    &:link, &:visited
+      color: #888
+      text-decoration: none
+
+.commentlist .children
+  list-style: none
+  margin: 0
+  li
+    border: none
+    margin: 0
+
+.nopassword, .nocomments
+  display: none
+
+#comments .pingback
+  margin-bottom: 18px
+  padding-bottom: 18px
+
+.commentlist li.comment+li.pingback
+  margin-top: -6px
+
+#comments .pingback
+  p
+    font-size: 12px
+    line-height: 18px
+    display: block
+    margin: 0
+  .url
+    font-style: italic
+    font-size: 13px
+
+/* Comments form
+
+#respond
+  margin: 24px 0
+  overflow: hidden
+  position: relative
+  p
+    margin: 0
+  .comment-notes
+    margin-bottom: 1em
+
+.form-allowed-tags
+  line-height: 1em
+
+.children #respond
+  margin: 0 48px 0 0
+
+h3#reply-title
+  margin: 18px 0
+
+#comments-list
+  #respond
+    margin: 0 0 18px 0
+  ul #respond
+    margin: 0
+
+#cancel-comment-reply-link
+  font-size: 12px
+  line-height: 18px
+  font-weight: normal
+
+#respond
+  label
+    font-size: 12px
+  input
+    margin: 0 0 9px
+    width: 98%
+  textarea
+    width: 98%
+  .form-allowed-tags
+    font-size: 12px
+    line-height: 18px
+    code
+      font-size: 11px
+  .form-submit
+    margin: 12px 0
+    input
+      width: auto
+      font-size: 14px
+
+/* Contact
+ *--------------------------------------------------------------
+
+.contact_form
+  padding-left: 20px
+  & p
+    margin-bottom: 5px
+  label
+    font-weight: bold
+    display: block
+    font-size: 13px
+    width: 80px
+  .field
+    margin-bottom: 10px
+    width: 250px
+  .field_textarea
+    margin-bottom: 10px
+    width: 400px
+    height: 150px
+  .captcha_field
+    margin-bottom: 10px
+    width: 90px
+
+.error
+  display: block
+  margin-top: -10px
+  font-size: 11px
+
+.success span
+  display: block
+  margin-bottom: 10px
+  font-size: 14px
