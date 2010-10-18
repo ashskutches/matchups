@@ -3,7 +3,6 @@ class CharactersController < ApplicationController
   # GET /characters.xml
   def index
     @characters = Character.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @characters }
@@ -44,7 +43,7 @@ class CharactersController < ApplicationController
 
     respond_to do |format|
       if @character.save
-        format.html { redirect_to(@character, :notice => 'Character was successfully created.') }
+        format.html { redirect_to(characters_path, :notice => 'Character was successfully created.') }
         format.xml  { render :xml => @character, :status => :created, :location => @character }
       else
         format.html { render :action => "new" }
@@ -74,10 +73,6 @@ class CharactersController < ApplicationController
   def destroy
     @character = Character.find(params[:id])
     @character.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(characters) }
-      format.xml  { head :ok }
-    end
+    redirect_to(characters_path) 
   end
 end

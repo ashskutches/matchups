@@ -1,13 +1,7 @@
-= form_for(@character) do |f|
-  = f.label 'Name'
-  = f.text_field :name
-  - if @character.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@character.errors.count, "error")
-        prohibited this character from being saved:
-      %ul
-        - @character.errors.full_messages.each do |msg|
-          %li= msg
-  .actions
-    = f.submit
+- form_for(@character) do |o|
+  %p
+    = o.label :name
+    %br
+    = o.text_field :name
+    %p
+      = o.submit "Submit"
