@@ -38,9 +38,9 @@
     #wrapper
       / Page header
       .page_header
-        %h1.bebas-font 
-          Match-up
-        %h2.bebas-font 
+        %h1.bebas-font
+          = link_to "Match-up", root_path
+        %h2.bebas-font
           Giant penis
         .clearfloat
       / Breadcrumb
@@ -53,31 +53,7 @@
         .clearfloat
       / Page content
       .page_content
-        / Sidebar left
-        .sidebar_left
-          %h2.bebas-font Characters
-          %ul.categories
-            %li
-              %a{:href => ""} Ryu
-            %li
-              %a{:href => ""} Abel
-            %li
-              %a{:href => ""} Ryu
-            %li
-              %a{:href => ""} Abel
-            %li
-              %a{:href => ""} Ryu
-            %li
-              %a{:href => ""} Abel
-            %li
-              %a{:href => ""} Ryu
-            %li
-              %a{:href => ""} Abel
-            %li
-              %a{:href => ""} Ryu
-            %li
-              %a{:href => ""} Abel
-          .clearfloat
+        = render :partial => '/layouts/sidebar'
         / Content right
         .content_right
           = yield 

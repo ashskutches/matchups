@@ -1,0 +1,10 @@
+/ Sidebar left
+.sidebar_left
+  %h2.bebas-font 
+    = link_to "Characters", characters_path
+  %ul.categories
+    - listofcharacter = Character.all.collect {|fighter| fighter.name}
+    - listofcharacter.each do |charactername|
+      = link_to "#{charactername}", (Character.find_by_name(charactername))
+  .clearfloat
+  
