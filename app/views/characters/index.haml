@@ -1,16 +1,12 @@
 #characters
   %h2 Listing characters
   %br
-  %h4= link_to 'Create a New Character', new_character_path
-  %br
     %table
       - @characters.each do |o|
         %tr
           %td
             = link_to "#{o.name}", o
           %td
-            *
-            = link_to 'Edit', edit_character_path(o)
-            *
-            = link_to 'Destroy', character_path(o.id), :method => :delete, :class=>:destroy,:confirm=>"Are you sure?"
-
+            = button_to "Delete", character_path(o), :method => :delete
+  %br
+  = render 'form'

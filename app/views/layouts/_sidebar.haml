@@ -4,7 +4,8 @@
     = link_to "Characters", characters_path
   %ul.categories
     - listofcharacter = Character.all.collect {|fighter| fighter.name}
-    - listofcharacter.each do |charactername|
-      = link_to "#{charactername}", (Character.find_by_name(charactername))
+    %ul
+      - listofcharacter.each do |charactername|
+        %li= link_to "#{charactername}", (Character.find_by_name(charactername))
   .clearfloat
   

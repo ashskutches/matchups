@@ -2,6 +2,7 @@ class CharactersController < ApplicationController
   # GET /characters
   # GET /characters.xml
   def index
+    @character = Character.new
     @characters = Character.all
     respond_to do |format|
       format.html # index.html.erb
@@ -73,6 +74,6 @@ class CharactersController < ApplicationController
   def destroy
     @character = Character.find(params[:id])
     @character.destroy
-    redirect_to(characters_path) 
+    redirect_to(characters_path)
   end
 end
