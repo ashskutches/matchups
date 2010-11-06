@@ -10,12 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101018014105) do
+ActiveRecord::Schema.define(:version => 20101103022315) do
 
   create_table "characters", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+  end
+
+  create_table "matchups", :force => true do |t|
+    t.integer  "player_id"
+    t.integer  "opponent_id"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

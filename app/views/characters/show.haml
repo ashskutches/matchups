@@ -1,3 +1,8 @@
-= link_to 'Edit', edit_character_path(@character)
-|
-\#{link_to 'Back', characters_path}
+= @matches.length
+- @matches.each do |o|
+  %h3
+    = o.player.name
+    vs
+    = o.opponent.name
+    %br
+    %br
