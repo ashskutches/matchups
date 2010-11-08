@@ -1,8 +1,8 @@
-= @matches.length
-- @matches.each do |o|
+%h2
+  = @character.name
+- @matches.each do |o| 
   %h3
-    = o.player.name
-    vs
-    = o.opponent.name
     %br
+    vs
+    = link_to "#{o.opponent.name}", matchup_path(o, :opponent => o.opponent, :player => o.player), :action => :get
     %br
