@@ -4,10 +4,6 @@ class CharactersController < ApplicationController
   def index
     @character = Character.new
     @characters = Character.all
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @characters }
-    end
   end
 
   # GET /characters/1
@@ -23,10 +19,6 @@ class CharactersController < ApplicationController
   def new
     @character = Character.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @character }
-    end
   end
 
   # GET /characters/1/edit
