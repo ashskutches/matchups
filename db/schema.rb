@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101103022315) do
+ActiveRecord::Schema.define(:version => 20101108224716) do
+
+  create_table "articles", :force => true do |t|
+    t.text     "body"
+    t.integer  "matchup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "characters", :force => true do |t|
     t.datetime "created_at"
