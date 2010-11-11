@@ -20,7 +20,7 @@ code {
 /* =Global Elements
  *-------------------------------------------------------------- */
 body {
-  background: black url(../images/background20.jpg) top center no-repeat;
+  background: black url(../images/background14.jpg) top center no-repeat;
   color: #666666; }
 
 input, textarea {
@@ -218,7 +218,7 @@ div.titanium_error {
  *-------------------------------------------------------------- */
 .sidebar_right fieldset, .sidebar_left fieldset {
   border-bottom: 1px solid #232323; }
-.sidebar_right h2, .sidebar_left h2 {
+.sidebar_right h2, .sidebar_left h2 a {
   color: white; }
 
 /* Left sidebar
@@ -228,7 +228,7 @@ div.titanium_error {
 .page_header {
   background: transparent url(../images/bg_page_header.png); }
 
-.page_header h1 {
+.page_header h1 a {
   color: white; }
 
 .page_header h2 {
@@ -304,7 +304,7 @@ div.titanium_error {
 /* Sidebar
  *-------------------------------------------------------------- */
 .search_btn {
-  background: url(../images/sprite_default_b.png) 0 0; }
+  background: url(../images/sprite_default.png) 0 0; }
 
 .categories {
   border-bottom: 1px solid #232323; }
@@ -329,29 +329,29 @@ div.titanium_error {
     background: transparent url(../images/view_more_btn.gif) 0px -46px; }
 
 .slide1 {
-  background: transparent url(../images/bg_slide1_w.png); }
+  background: transparent url(../images/bg_slide1.png); }
 
 .slide2 {
-  background: transparent url(../images/bg_slide2_w.png); }
+  background: transparent url(../images/bg_slide2.png); }
 
 .slide3 {
   background: transparent url(../images/bg_slide3.png); }
 
 ul.pagination a {
-  background: url(../images/sprite_default_b.png) -98px -37px no-repeat; }
+  background: url(../images/sprite_default.png) -98px -37px no-repeat; }
 ul.pagination li.active a {
   background-position: -69px -37px;
   outline: none; }
 
 .previous {
-  background: url(../images/sprite_default_b.png) -130px -37px no-repeat; }
+  background: url(../images/sprite_default.png) -130px -37px no-repeat; }
   .previous:hover {
-    background: url(../images/sprite_default_b.png) -6px -37px no-repeat; }
+    background: url(../images/sprite_default.png) -6px -37px no-repeat; }
 
 .next {
-  background: url(../images/sprite_default_b.png) -157px -37px no-repeat; }
+  background: url(../images/sprite_default.png) -157px -37px no-repeat; }
   .next:hover {
-    background: url(../images/sprite_default_b.png) -33px -37px no-repeat; }
+    background: url(../images/sprite_default.png) -33px -37px no-repeat; }
 
 /* Homepage content
  *-------------------------------------------------------------- */
@@ -405,14 +405,14 @@ ul.pagination li.active a {
   color: white; }
 
 .preview_btn {
-  background: url(../images/sprite_default_b.png) 0 -119px; }
+  background: url(../images/sprite_default.png) 0 -119px; }
   .preview_btn:hover {
-    background: url(../images/sprite_default_b.png) -129px -119px; }
+    background: url(../images/sprite_default.png) -129px -119px; }
 
 .details_btn {
-  background: url(../images/sprite_default_b.png) 0 -167px; }
+  background: url(../images/sprite_default.png) 0 -167px; }
   .details_btn:hover {
-    background: url(../images/sprite_default_b.png) -128px -167px; }
+    background: url(../images/sprite_default.png) -128px -167px; }
 
 /* Blog page
  *-------------------------------------------------------------- */

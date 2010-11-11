@@ -53,7 +53,19 @@
         .clearfloat
       / Page content
       .page_content
-        = render :partial => '/layouts/sidebar'
+        .sidebar_left
+          .widget_search
+            %form{:action => "", :name => ""}
+              %fieldset
+                %input#s{:name => "", :type => "text", :value => ""}/
+                %a.search_btn{:href => "javascript:document.searchform.submit()"} Search
+            .clearfloat
+          = render :partial => '/layouts/sidebar'
         / Content right
         .content_right
           = yield 
+          .clearfloat
+      #footer
+        = render :partial => '/layouts/footer'
+        .clearfloat
+
