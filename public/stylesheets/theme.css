@@ -218,7 +218,7 @@ div.titanium_error {
  *-------------------------------------------------------------- */
 .sidebar_right fieldset, .sidebar_left fieldset {
   border-bottom: 1px solid #232323; }
-.sidebar_right h2, .sidebar_left h2 a {
+.sidebar_right h2, .sidebar_left h2 {
   color: white; }
 
 /* Left sidebar
@@ -228,7 +228,7 @@ div.titanium_error {
 .page_header {
   background: transparent url(../images/bg_page_header.png); }
 
-.page_header h1 a {
+.page_header h1 {
   color: white; }
 
 .page_header h2 {
@@ -259,6 +259,10 @@ div.titanium_error {
 /* Footer area
  *-------------------------------------------------------------- */
 #footer {
+  right: 10px;
+  bottom: 10px;
+  font-size: 12px;
+  position: fixed;
   border-top: 1px solid #171717;
   background: #020202; }
 
