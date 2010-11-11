@@ -1,0 +1,15 @@
+Matchup: Feedback List
+
+%ul
+- @feedbacks.each do |feedback|
+  %br
+  %li
+    %h2
+      = feedback.kind
+    %hr
+    %p
+      = feedback.body
+    %h4
+      *
+      = feedback.referer
+      / = link_to "Destroy", feedback, :confirm => 'Are you sure?', :method => :delete
