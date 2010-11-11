@@ -45,11 +45,7 @@
         .clearfloat
       / Breadcrumb
       .breadcrumb
-        %ul
-          %li
-            %a{:href => "index.html"}> Ryu
-            \&nbsp;&nbsp;/&nbsp;&nbsp;
-          %li vs Akuma
+        = render :partial => '/layouts/breadcrum'
         .clearfloat
       / Page content
       .page_content
