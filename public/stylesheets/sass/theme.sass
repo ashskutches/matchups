@@ -1,503 +1,72 @@
-/* =Fonts
- *--------------------------------------------------------------
-
-pre
-  background: url("../images/pre-bg.gif") repeat scroll 0 0 #e8ebec
-  border: 1px dotted #999
-  color: #333333
-
-code
-  background: #999
-  border: 1px dotted #BBBBBB
-  color: #000
-
-.highlight
-  background: #6a0202
-  display: inline-block
-  font-size: 22px
-  color: #fff
-  padding: 5px 5px 0 5px
-
-/* =Global Elements
- *--------------------------------------------------------------
+/* GENERAL ------------------------------------------------------------
 
 body
-  background: black url(../images/background14.jpg) top center no-repeat
-  color: #666
+  background: #f9f7e8 url(../img/spring/bg.gif) repeat-x top center
+  /*background: url(../img/rhythm-21.gif);
 
-input, textarea
-  color: #666
-
-#dummy-element
-  width: 2px
-
-/* Necessary to check if StyleSheet has loaded
-
-.logo
-  background: transparent url(../images/logo.png) top center no-repeat
-  width: 285px
-  height: 92px
-
-.buy_theme_btn
-  background: transparent url(../images/buy_theme.png) top center no-repeat
-  width: 285px
-  height: 68px
-
-.hr_line
-  height: 0
-  border-top: 1px solid #171717
-  padding-top: 10px
-
-hr
-  background-color: #171717
-
-/* Text elements
- *--------------------------------------------------------------
-
-p
-  color: #888
-
-.page_content h2
-  color: #c40202
-
-blockquote
-  border-left: 5px solid #444
-
-ins
-  background: #ffc
-
-abbr, acronym
-  border-bottom: 1px dotted #666
-
-input[type="text"]
-  background: #f9f9f9
-  border: 1px solid #000
-
-a
-  color: #e60606
-  text-decoration: underline
-  &:visited
-    color: #e60606
-  &:active, &:hover
-    color: #fff
-    text-decoration: none
-
-/* Bulleted lists
- *--------------------------------------------------------------
-
-ul
-  &.bullet-check li
-    background: url("../images/bullets/check.gif") no-repeat scroll 0 0.2em transparent
-  &.bullet-gray li
-    background: url("../images/bullets/dot_gray.gif") no-repeat scroll 0 7px transparent
-  &.bullet-silver li
-    background: url("../images/bullets/dot_gray_light.gif") no-repeat scroll 0 7px transparent
-  &.bullet-blue li
-    background: url("../images/bullets/dot_blue.gif") no-repeat scroll 0 7px transparent
-  &.bullet-green li
-    background: url("../images/bullets/dot_green.gif") no-repeat scroll 0 7px transparent
-  &.bullet-orange li
-    background: url("../images/bullets/dot_orange.gif") no-repeat scroll 0 7px transparent
-  &.bullet-red li
-    background: url("../images/bullets/dot_red.gif") no-repeat scroll 0 7px transparent
-  &.bullet-disc-gray li
-    background: url("../images/bullets/circle_gray.gif") no-repeat scroll 0 7px transparent
-  &.bullet-disc-silver li
-    background: url("../images/bullets/circle_gray_light.gif") no-repeat scroll 0 7px transparent
-  &.bullet-disc-blue li
-    background: url("../images/bullets/circle_blue.gif") no-repeat scroll 0 7px transparent
-  &.bullet-disc-green li
-    background: url("../images/bullets/circle_green.gif") no-repeat scroll 0 7px transparent
-  &.bullet-disc-orange li
-    background: url("../images/bullets/circle_orange.gif") no-repeat scroll 0 7px transparent
-  &.bullet-disc-red li
-    background: url("../images/bullets/circle_red.gif") no-repeat scroll 0 7px transparent
-
-/* Numbered lists
- *--------------------------------------------------------------
-
-ol.number-pad
-  background: url("../images/bullets/ordered-background.gif") repeat-y scroll 0 0 #e5e5e5
-  border-left: 1px solid #E9E9E9
-  li
-    border-bottom: 1px dotted #fff
-
-/* Table style
- *--------------------------------------------------------------
-
-#tableLayout
-  th.tableColumn
-    background-color: #AFAFAF
-    border-color: #C6C6C6
-    color: #000
-  td
-    &.tableItem, &.tableOdd
-      background-color: #AFAFAF
-      border-color: #C6C6C6
-      color: #000
-    &.tableEven
-      background-color: #AFAFAF
-      border-color: #C6C6C6
-      color: #000
-      background-color: #E8EBEC
-    &.tableOdd
-      background-color: #F9F9F9
-    &.checkMark
-      background-image: url(../images/bullets/check.gif)
-      background-position: center center
-      background-repeat: no-repeat
-    &.last
-      border-bottom: 1px solid #C6C6C6
-
-#tableLayout	a
-  color: #C40202
-
-/* Buttons
- *--------------------------------------------------------------
-
-.page_content .titanium_button
-  color: #ccc
-  text-decoration: none
-  text-transform: uppercase
-  font-weight: 700
-  background: #222
-  padding: 8px 12px 8px 12px
-  display: table-cell
-  line-height: 100%
-  -moz-border-radius: 3px
-  -webkit-border-radius: 3px
-
-.titanium_button:hover
-  color: #fff
-  background: #950303
-
-input[type=submit].titanium_button
-  border: 0
-  cursor: pointer
-  padding: 10px 15px
-
-/* Info boxes
- *--------------------------------------------------------------
+.color2
+  color: #e1820b
 
 div
-  &.titanium_info
-    border: 1px solid #cccccc
-    background: #e9e9e9 url(../images/i_info.png) no-repeat 19px 19px
-    padding: 15px 15px 15px 70px
-    margin-bottom: 20px
-    clear: both
-    min-height: 43px
-  &.titanium_warning
-    border: 1px solid #eee3b1
-    background: #f6f0d9 url(../images/i_warning.png) no-repeat 19px 19px
-    padding: 15px 15px 15px 70px
-    margin-bottom: 20px
-    color: #a47607
-    clear: both
-    min-height: 43px
-  &.titanium_successful
-    border: 1px solid #b5e4a0
-    background: #dceccf url(../images/i_successful.png) no-repeat 19px 19px
-    padding: 15px 15px 15px 70px
-    margin-bottom: 20px
-    color: #427625
-    clear: both
-    min-height: 43px
-  &.titanium_error
-    border: 1px solid #d9c2ba
-    background: #f2e1d8 url(../images/i_error.png) no-repeat 19px 19px
-    padding: 15px 15px 15px 70px
-    margin-bottom: 20px
-    color: #872a06
-    clear: both
-    min-height: 43px
+  &.comments ol.comments-list li
+    &:nth-child(odd)
+      background: #faf9f5
+    p.meta
+      color: #989281
+      span
+        color: #e1820b
+  &#posts div.post a.more, &.holder div.block a.more
+    background: url(../img/spring/more-button.png) no-repeat
+  &#posts div
+    &.post p.post-comments, &.single p.post-comments, &.comments p.post-comments
+      background: url(../img/spring/comments-balloon.png) no-repeat
+      color: white
 
-/* =Structure
- *--------------------------------------------------------------
+/* imgs ------------------------------------------------------------
 
-.page_content
-  background: #000
+/* PAGER ------------------------------------------------------------
 
-/* Header
- *--------------------------------------------------------------
-
-#header
-  border-bottom: 1px solid #262626
-
-#site-title a
-  color: #000
-  font-weight: bold
-  text-decoration: none
-
-/* Right sidebar
- *--------------------------------------------------------------
-
-.sidebar_right, .sidebar_left
-  fieldset
-    border-bottom: 1px solid #232323
+ul.pager li
+  display: block
+  width: 13px
+  height: 13px
+  float: left
+  background: url(../img/spring/pager.png) no-repeat
+  background-position: -18px 0px
+  margin-left: 5px
+  &:hover, &.active
+    background-position: -38px 0px
   a
-    color: #fff
-  h2
-    color: #fff
+    display: block
+    width: 100%
+    height: 100%
+    text-indent: -9000px
+  &:first-child
+    background-position: 0px 0px
+  &:last-child
+    background-position: -59px 0px
 
-/* Left sidebar
- *--------------------------------------------------------------
+/* HEADER ------------------------------------------------------------
 
-/* Page header
- *--------------------------------------------------------------
+div#header
+  background: url(../img/spring/top-bg.png) no-repeat
 
-.page_header
-  background: transparent url(../images/bg_page_header.png)
-
-.page_header	h1 a 
-  color: #fff
-
-.page_header	h2 a
-  color: #858282
-
-/* Breadcrumb
- *--------------------------------------------------------------
-
-.breadcrumb	li
-  color: #fff
-
-.breadcrumb	li	a
-  color: #e60606
-
-/* Sort nav
- *--------------------------------------------------------------
-
-.sort-nav
-  background: #000
-
-.sort-nav	ul li	a
-  color: #fff
-
-.sort-nav	ul	li	a:hover
-  background: #333333
-
-.sort-nav	ul li	a.selected
-  background: #950303
-
-/* Footer area
- *--------------------------------------------------------------
-
-#footer
-  border-top: 1px solid #171717
-  background: #020202
-
-#footer.copyright
-  color: #1a1a1a
-
-#footer.social	li	a
-  filter: alpha(opacity = 30)
-  opacity: 0.3
-
-#footer.social	li	a:hover
-  filter: alpha(opacity = 100)
-  opacity: 1
-
-/* =Content
- *--------------------------------------------------------------
-/* Main menu
- *--------------------------------------------------------------
-
-#access
-  /*background: #000;
-  a
-    color: #aaa
-  ul ul a
-    background: #333
-  li:hover > a
-    color: #fff
-    background: #333
-  ul
-    ul
-      \:hover > a
-        color: #fff
-        background: #950303
-      ul a
-        color: #fff
-        background: #950303
-        &:hover
-          text-decoration: underline
-    li
-      &.current_page_item > a, &.current-menu-ancestor > a, &.current-menu-item > a, &.current-menu-parent > a
-        color: #fff
-        background: #950303
-
-* html #access ul li
-  &.current_page_item a, &.current-menu-ancestor a, &.current-menu-item a, &.current-menu-parent a, a:hover
-    color: #fff
-
-/* Sidebar
- *--------------------------------------------------------------
-
-.search_btn
-  background: url(../images/sprite_default.png) 0 0
-
-.categories
-  li a
-    text-decoration: none
-    color: #e60606
-    line-height: 20px
-    font-size: 14px
-    &:hover
-      text-decoration: underline
-  border-bottom: 1px solid #232323
-
-/* Homepage
- *--------------------------------------------------------------
-/* Featured content
- *--------------------------------------------------------------
-
-.info_slide	h1, .info_slide	p
-  color: #fff
-
-.more_btn
-  background: transparent url(../images/view_more_btn.gif) 0px 0
+ul#nav li a
+  color: #665d4e
   &:hover
-    background: transparent url(../images/view_more_btn.gif) 0px -46px
+    color: #e1820b
 
-.slide1
-  background: transparent url(../images/bg_slide1.png)
+/* FOOTER ------------------------------------------------------------
 
-.slide2
-  background: transparent url(../images/bg_slide2.png)
-
-.slide3
-  background: transparent url(../images/bg_slide3.png)
-
-ul.pagination
-  a
-    background: url(../images/sprite_default.png) -98px -37px no-repeat
-  li.active a
-    background-position: -69px -37px
-    outline: none
-
-.previous
-  background: url(../images/sprite_default.png) -130px -37px no-repeat
-  &:hover
-    background: url(../images/sprite_default.png) -6px -37px no-repeat
-
-.next
-  background: url(../images/sprite_default.png) -157px -37px no-repeat
-  &:hover
-    background: url(../images/sprite_default.png) -33px -37px no-repeat
-
-/* Homepage content
- *--------------------------------------------------------------
-
-#home-content
-  border-top: 1px solid #171717
-  .item1
-    border-right: 1px solid #171818
-    background: transparent url("../images/i_clock.png") no-repeat left top
-  .item2
-    border-right: 1px solid #171818
-    background: transparent url("../images/i_calendar.png") no-repeat left top
-  .item3
-    border-right: 1px solid #171818
-    background: transparent url("../images/i_mail.png") no-repeat left top
-
-#home-content	h2	a
-  color: #c4c4c4
-  text-decoration: none
-  background: transparent url("../images/small_arrow.png") no-repeat right 10px
-  padding-right: 20px
-  &:hover
-    color: #930303
-    text-decoration: underline
-
-#home-content .no_border
-  border: none
-
-/* Portfolio
- *--------------------------------------------------------------
-
-.work_gallery li
-  background: #fff
-  &.opacize .image
-    opacity: .8
-    filter: alpha(opacity = 80)
-    z-index: 3
-  .text
-    background: transparent url(../images/bg_open.png)
-    color: #fff
-  .text	h2, .text	p
-    color: #fff
-  .text .highlight
-    background: #6a0202
-    color: #fff
-
-/* portfolio item
-
-.page_content.item_details	p	a
-  color: #e60606
-
-.page_content.item_details .highlight
-  background: #6a0202
-  color: #fff
-
-.preview_btn
-  background: url(../images/sprite_default.png) 0 -119px
-  &:hover
-    background: url(../images/sprite_default.png) -129px -119px
-
-.details_btn
-  background: url(../images/sprite_default.png) 0 -167px
-  &:hover
-    background: url(../images/sprite_default.png) -128px -167px
-
-/* Blog page
- *--------------------------------------------------------------
-
-.blogPostSummary
-  border-bottom: 1px solid #171818
-
-.blog_nav.previous, .blog_nav.next
-  color: #2F2F2F
-
-.blog_nav	cufon:hover
-  text-decoration: underline
-  color: #C40202
-
-/* Comments
- *--------------------------------------------------------------
-
-.commentlist li.comment
-  border-top: 1px solid #171818
-
-.comment-author cite
-  color: #000
-
-.comment-meta a
-  &:link, &:visited
-    color: #888
-    text-decoration: none
-  &:active, &:hover
-    color: #FF4B33
-
-#comments .pingback
-  border-bottom: 1px solid #e7e7e7
-  p
-    color: #888
-
-/* Comments form
-
-#respond
-  border-top: 1px solid #171818
-  .required
-    color: #FF4B33
-    font-weight: bold
-  label, .form-allowed-tags
-    color: #888
-
-/* Contact
- *--------------------------------------------------------------
-
-.error
-  color: red
-
-.success span
-  color: #fff
+div#footer
+  background: url(../img/spring/footer-bg.png) repeat-x #777264 top center
+  ul#follow li p
+    color: #665d4e
+  div
+    &.footer-cols ul li
+      a
+        color: #b8b6aa
+      &:first-child a
+        color: #f9f7e8
+    &.footer-bottom p.legal
+      color: #b8b6aa

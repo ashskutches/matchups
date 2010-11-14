@@ -1,8 +1,10 @@
-%h2.bebas-font 
-  = link_to "Characters", characters_path
-%ul.categories
-  - listofcharacter = Character.all.collect {|fighter| fighter.name}
-  %ul
-    - listofcharacter.each do |charactername|
-      %li= link_to "#{charactername}", (Character.find_by_name(charactername))
-
+/ sidebar
+#sidebar
+  / side-block
+  %ul.side-block
+    %li 
+      = link_to "Characters", characters_path
+      - listofcharacter = Character.all.collect {|fighter| fighter.name}
+      - listofcharacter.each do |charactername|
+        %li
+          %a.custom= link_to "#{charactername}", (Character.find_by_name(charactername))
