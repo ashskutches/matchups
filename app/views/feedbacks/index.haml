@@ -1,15 +1,18 @@
-Matchup: Feedback List
+%h2 Matchup: Feedback List
+%hr
 
-%ul
+
 - @feedbacks.each do |feedback|
   %br
-  %li
-    %h2
-      = feedback.kind
-    %hr
-    %p
-      = feedback.body
-    %h4
-      *
-      = feedback.referer
-      / = link_to "Destroy", feedback, :confirm => 'Are you sure?', :method => :delete
+  %h2
+    = feedback.kind.titleize
+  %p
+    = feedback.body
+  %p
+    *
+    %b= feedback.referer
+    (
+    = feedback.created_at.to_date
+    )
+  %hr
+    / = link_to "Destroy", feedback, :confirm => 'Are you sure?', :method => :delete
