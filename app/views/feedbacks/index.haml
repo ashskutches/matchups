@@ -1,18 +1,19 @@
-%h2 Matchup: Feedback List
-%hr
-
-
-- @feedbacks.each do |feedback|
-  %br
-  %h2
-    = feedback.kind.titleize
-  %p
-    = feedback.body
-  %p
-    *
-    %b= feedback.referer
-    (
-    = feedback.created_at.to_date
-    )
+#posts
+  %h2 Matchup: Feedback List
   %hr
-    / = link_to "Destroy", feedback, :confirm => 'Are you sure?', :method => :delete
+
+
+  - @feedbacks.each do |feedback|
+    %br
+    %h2
+      = feedback.kind.titleize
+    %p
+      = feedback.body
+    %p
+      *
+      %b= feedback.referer
+      (
+      = feedback.created_at.to_date
+      )
+    %hr
+      / = link_to "Destroy", feedback, :confirm => 'Are you sure?', :method => :delete

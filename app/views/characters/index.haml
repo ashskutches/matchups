@@ -1,12 +1,13 @@
-#characters
-  %h2 Listing characters
-  %br
-    %table
-      - @characters.each do |o|
-        %tr
-          %td
-            = link_to "#{o.name}", o
-          %td
-            = button_to "Delete", character_path(o), :method => :delete
-  %br
-  = render 'form'
+#posts
+  #characters
+    %h2 Listing characters
+    %br
+      %table
+        - @characters.each do |o|
+          %tr
+            %td
+              = link_to "#{o.name}", o
+            %td
+              = button_to "Delete", character_path(o), :method => :delete
+    %br
+    = render 'form'

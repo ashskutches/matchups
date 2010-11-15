@@ -1,14 +1,15 @@
-%table
-  %tr
-    %td
-      %h2
-        = @player.name
-        vs
-        = @opponent.name
-      - @articles.each do |o|
-        =o.body
-        %br
-    %td
-      %h2
-        = link_to "Post", new_matchup_article_path(:matchup_id => params[:id])
+#posts
+  %table
+    %tr
+      %td
+        %h2
+          = @player.name
+          vs
+          = @opponent.name
+        - @articles.each do |o|
+          =o.body
+          %br
+      %td
+        %h2
+          = link_to "Post", new_matchup_article_path(:matchup_id => params[:id])
 
