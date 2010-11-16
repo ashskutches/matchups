@@ -3,7 +3,7 @@
 - form_for @feedback do |form|
   %p
     %br
-    %b Who do I owe thanks?
+    %b Name:
     %br
     = form.text_field :referer
   %p 
@@ -21,10 +21,9 @@
   %br
   
   %p
-    %b Write a short description
+    %b Write a short description:
     %br
     = form.text_area :body
-
-  %br
-  
+  %p
+    Thank you!  
   = form.submit "Submit"
