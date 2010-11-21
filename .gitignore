@@ -1,4 +1,12 @@
-.bundle
-db/*.sqlite3
 log/*.log
-tmp/**/*
+tmp/*
+nbproject
+*.tmp
+*/*.tmp
+config/campfire.yml
+rerun.txt
+.DS_Store
+*/**/.DS_Stor de
+capybara*
+spec/fixtures/ephemeral_response/*
+.specjour/*
