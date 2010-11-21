@@ -1,8 +1,11 @@
 #posts
-  %h2
-    = @character.name
-  - @matches.each do |o| 
-    %h3
-      vs
-      = link_to "#{o.opponent.name}", matchup_path(o, :opponent => o.opponent, :player => o.player), :action => :get
-      %br
+  %table
+    %th
+      %h2
+        = @character.name
+    - @opponent_names.sort.in_groups_of(6) do |group|
+      %tr
+        -group.each do |opponent_name|
+          %td
+            vs
+            = link_to "#{opponent_name}", matchup_path(), :action => :get

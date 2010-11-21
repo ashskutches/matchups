@@ -11,7 +11,7 @@ class CharactersController < ApplicationController
   def show
     @character = Character.find(params[:id])
     @matches   = Matchup.find_all_by_player_id(@character)
-
+    @opponent_names = @matches.collect {|fighter| fighter.opponent.name}
   end
 
   # GET /characters/new
