@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101111175229) do
+ActiveRecord::Schema.define(:version => 20101201132418) do
 
   create_table "articles", :force => true do |t|
     t.text     "body"
@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(:version => 20101111175229) do
   end
 
   create_table "matchups", :force => true do |t|
-    t.integer  "player_id"
-    t.integer  "opponent_id"
+    t.integer  "player"
+    t.integer  "opponent"
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"

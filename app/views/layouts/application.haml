@@ -1,44 +1,10 @@
 !!! Strict
 %html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
   %head
-    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
-    %meta{:content => "en", "http-equiv" => "Content-Language"}/
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "", :name => "keywords"}/
     %title Match-up
-    / CSS
     = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
-    = stylesheet_link_tag 'theme.css', :rel => 'stylesheet', :type => 'text/css'
-    / ENDS CSS
     =render :partial => '/layouts/javascript'
   %body
-    / WRAPPER
-    #wrapper
-      / navigation
-      %ul#nav.sf-menu
-        %li.custom.last
-          %a{:href => "/"} Super Street Fighter 4
-        %li.custom
-          %a{:href => "/feedbacks/new"} Feedback
-      / ENDS navigation
-      / HEADER
-      #header
-        %a{:href => "/"}
-          / %h1
-          /   = link_to "Match-up", root_path
-          / %img#logo{:alt => "Logo", :src => "img/logo.png"}/
-        / %form#search{:action => "", :method => "post"}
-        /   %p
-        /     %input#keyword{:name => "keyword", :onblur => "clearInput(this)", :onfocus => "defaultInput(this)", :title => "Search...", :type => "text", :value => "Search..."}/
-        /   %p
-        /     %input#go{:type => "submit", :value => ""}/
-        /   .clear
-      / ENDS HEADER
-      / MAIN
-      #main
-        = yield 
-        = render :partial => '/layouts/sidebar'
-      / ENDS MAIN
-    / ENDS WRAPPER
-    / FOOTER
-    = render :partial => '/layouts/footer'
+    #main
+      = yield 
+    -# = render :partial => '/layouts/footer'

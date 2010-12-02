@@ -5,5 +5,5 @@ Matchups::Application.routes.draw do
     resources :articles
   end
   
-  root :to => "main#home"
+  root :to => "characters#index"
 end

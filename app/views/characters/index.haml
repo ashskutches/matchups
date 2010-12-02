@@ -1,13 +1,12 @@
 #posts
   #characters
     %h2 Listing characters
-    %br
-      %table
-        - @characters.each do |o|
-          %tr
+    %table
+      - @characters.map(&:name).sort.in_groups_of(2).each do |group|
+        %tr
+          - group.each do |o|
             %td
-              = link_to "#{o.name}", o
-            %td
-              = button_to "Delete", character_path(o), :method => :delete
+              - o = Character.find_by_name(o)
+              = link_to "#{o.name}", character_path(o.id)
     %br
     = render 'form'

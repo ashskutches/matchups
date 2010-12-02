@@ -3,9 +3,9 @@
     %th
       %h2
         = @character.name
-    - @opponent_names.sort.in_groups_of(6) do |group|
+    - @matches.sort.each_slice(4) do |group|
       %tr
-        -group.each do |opponent_name|
+        -group.each do |match|
           %td
             vs
-            = link_to "#{opponent_name}", matchup_path(), :action => :get
+            = link_to "#{match.opponent.name}", matchup_path(match)

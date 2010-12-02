@@ -1,0 +1,121 @@
+<mockup version="1.0" skin="sketch" measuredW="1528" measuredH="539" mockupW="1078" mockupH="472">
+  <controls>
+    <control controlID="1" controlTypeID="__group__" x="440" y="57" w="-1" h="-1" measuredW="422" measuredH="70" zOrder="0" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="422" h="70" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="1"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::LinkBar" x="292" y="24" w="-1" h="-1" measuredW="109" measuredH="23" zOrder="1" locked="false" isInGroup="1">
+          <controlProperties>
+            <text>Log%20in%2C%20Sign%20up</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Icon" x="16" y="11" w="-1" h="-1" measuredW="48" measuredH="48" zOrder="2" locked="false" isInGroup="1"/>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="2" controlTypeID="__group__" x="440" y="353" w="422" h="70" measuredW="422" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="422" h="70" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="2"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::Button" x="0" y="21" w="89" h="28" measuredW="68" measuredH="28" zOrder="1" locked="false" isInGroup="2">
+          <controlProperties>
+            <text>Twitter</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Button" x="89" y="21" w="101" h="28" measuredW="77" measuredH="28" zOrder="2" locked="false" isInGroup="2">
+          <controlProperties>
+            <text>Facebook</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::Button" x="264" y="21" w="150" h="28" measuredW="114" measuredH="28" zOrder="3" locked="false" isInGroup="2">
+          <controlProperties>
+            <text>Something%20else</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="3" controlTypeID="__group__" x="440" y="126" w="-1" h="-1" measuredW="422" measuredH="58" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="29" w="422" h="29" measuredW="410" measuredH="29" zOrder="0" locked="false" isInGroup="3">
+          <controlProperties>
+            <text>Ryu%2C%20Ken%2C%20Chun-Li%2C%20Guile%2C%20E.Honda%2C%20Bison%2C%20Balrog</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="0" w="422" h="29" measuredW="433" measuredH="29" zOrder="1" locked="false" isInGroup="3">
+          <controlProperties>
+            <text>Blanka%2C%20Sagat%2C%20Abel%2C%20C.%20Viper%2C%20Fei%20Long%2C%20Seth%2C%20Vega</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Arrow" x="865" y="147" w="104" h="13" measuredW="150" measuredH="100" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Arrow" x="880" y="304" w="122" h="15" measuredW="150" measuredH="100" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Arrow" x="868" y="440" w="131" h="22" measuredW="150" measuredH="100" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="950" y="175" w="263" h="52" measuredW="513" measuredH="23" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Some%20sort%20of%20Navigation%2C%20not%20exactly%20sure%20how%20to%20show%2036%20characters%20at%20once%20easily.</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="984" y="337" w="534" h="52" measuredW="284" measuredH="23" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>News%20content%20for%20site%2C%20might%20be%20a%20blog%20engine.</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="984" y="477" w="263" h="52" measuredW="131" measuredH="23" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Possibly%20not%20nessary.</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="__group__" x="440" y="184" w="-1" h="-1" measuredW="422" measuredH="58" zOrder="9" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="29" w="422" h="29" measuredW="410" measuredH="29" zOrder="0" locked="false" isInGroup="11">
+          <controlProperties>
+            <text>Ryu%2C%20Ken%2C%20Chun-Li%2C%20Guile%2C%20E.Honda%2C%20Bison%2C%20Balrog</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="0" w="422" h="29" measuredW="433" measuredH="29" zOrder="1" locked="false" isInGroup="11">
+          <controlProperties>
+            <text>Blanka%2C%20Sagat%2C%20Abel%2C%20C.%20Viper%2C%20Fei%20Long%2C%20Seth%2C%20Vega</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="12" controlTypeID="__group__" x="440" y="242" w="-1" h="-1" measuredW="422" measuredH="58" zOrder="10" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="29" w="422" h="29" measuredW="410" measuredH="29" zOrder="0" locked="false" isInGroup="12">
+          <controlProperties>
+            <text>Ryu%2C%20Ken%2C%20Chun-Li%2C%20Guile%2C%20E.Honda%2C%20Bison%2C%20Balrog</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="0" w="422" h="29" measuredW="433" measuredH="29" zOrder="1" locked="false" isInGroup="12">
+          <controlProperties>
+            <text>Blanka%2C%20Sagat%2C%20Abel%2C%20C.%20Viper%2C%20Fei%20Long%2C%20Seth%2C%20Vega</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="13" controlTypeID="__group__" x="440" y="296" w="-1" h="-1" measuredW="422" measuredH="58" zOrder="11" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="29" w="422" h="29" measuredW="410" measuredH="29" zOrder="0" locked="false" isInGroup="13">
+          <controlProperties>
+            <text>Ryu%2C%20Ken%2C%20Chun-Li%2C%20Guile%2C%20E.Honda%2C%20Bison%2C%20Balrog</text>
+          </controlProperties>
+        </control>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::MenuBar" x="0" y="0" w="422" h="29" measuredW="433" measuredH="29" zOrder="1" locked="false" isInGroup="13">
+          <controlProperties>
+            <text>Blanka%2C%20Sagat%2C%20Abel%2C%20C.%20Viper%2C%20Fei%20Long%2C%20Seth%2C%20Vega</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+  </controls>
+</mockup>

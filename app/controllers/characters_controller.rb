@@ -2,7 +2,7 @@ class CharactersController < ApplicationController
   # GET /characters
   # GET /characters.xml
   def index
-    @character = Character.new
+    @character  = Character.new
     @characters = Character.all
   end
 
@@ -10,8 +10,7 @@ class CharactersController < ApplicationController
   # GET /characters/1.xml
   def show
     @character = Character.find(params[:id])
-    @matches   = Matchup.find_all_by_player_id(@character)
-    @opponent_names = @matches.collect {|fighter| fighter.opponent.name}
+    @matches   = Matchup.find_all_by_player(@character.id)
   end
 
   # GET /characters/new
