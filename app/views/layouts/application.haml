@@ -1,5 +1,7 @@
 !!! Strict
 %html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+  %nav
+    = render :partial => '/layouts/nav'
   %head
     %title Match-up
     = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
@@ -7,4 +9,4 @@
   %body
     #main
       = yield 
-    -# = render :partial => '/layouts/footer'
+    = render :partial => '/layouts/footer'
