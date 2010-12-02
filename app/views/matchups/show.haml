@@ -7,7 +7,10 @@
           vs
           = @match.opponent.name
         - @match.articles.each do |o|
-          =o.body
-          %br
+          %table
+            %hr
+            %tr
+              %td
+                =o.body
   %br
   = render 'form'
