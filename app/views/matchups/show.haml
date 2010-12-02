@@ -1,16 +1,13 @@
 #posts
-  %table
-    %tr
-      %td
-        %h2
-          = @match.player.name
-          vs
-          = @match.opponent.name
-        - @match.articles.each do |o|
-          %table
-            %hr
-            %tr
-              %td
-                =o.body
+  %h2
+    = @match.player.name
+    vs
+    = @match.opponent.name
+    - @match.articles.each do |o|
+      %table
+        %hr
+        %tr
+          %td
+            =o.body
   %br
   = render 'form'

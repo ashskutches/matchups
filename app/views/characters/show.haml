@@ -1,8 +1,7 @@
-#posts
+#characters
+  %h2
+    = @character.name
   %table
-    %th
-      %h2
-        = @character.name
     - @matches.sort.each_slice(2) do |group|
       %tr
         -group.each do |match|
