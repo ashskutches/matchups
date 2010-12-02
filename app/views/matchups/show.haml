@@ -9,6 +9,5 @@
         - @match.articles.each do |o|
           =o.body
           %br
-      %td
-        %h2
-          = link_to "Post", new_matchup_article_path(:matchup_id => params[:id])
+  %br
+  = render 'form'
