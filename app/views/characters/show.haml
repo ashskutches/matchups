@@ -3,7 +3,7 @@
     %th
       %h2
         = @character.name
-    - @matches.sort.each_slice(4) do |group|
+    - @matches.sort.each_slice(2) do |group|
       %tr
         -group.each do |match|
           %td
