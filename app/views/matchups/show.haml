@@ -1,13 +1,15 @@
-#posts
+#content
   %h2
     = @match.player.name
     vs
     = @match.opponent.name
+  #articles
     - @match.articles.each do |o|
       %table
         %hr
         %tr
           %td
-            =o.body
+            %p
+              =o.body
   %br
   = render 'form'

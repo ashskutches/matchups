@@ -1,12 +1,11 @@
-!!! Strict
-%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
-  %nav
-    = render :partial => '/layouts/nav'
+%html
   %head
     %title Match-up
     = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
-    =render :partial => '/layouts/javascript'
+    = render :partial => '/layouts/javascript'
   %body
-    #main
-      = yield 
+    #wrapper
+      %nav= render :partial => '/layouts/nav'
+      #main
+        = yield 
     = render :partial => '/layouts/footer'

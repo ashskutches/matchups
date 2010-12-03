@@ -1,29 +1,27 @@
-%h2 Submit Feedback
- 
-- form_for @feedback do |form|
-  %p
+#content
+  %h2 Submit Feedback
+  - form_for @feedback do |form|
+    %p
+      %br
+      %b Name:
+      %br
+      = form.text_field :referer
+    %p 
+      %b Choose Kind:
+      %br
+      = radio_button("feedback", "kind", "bug", :checked => true)
+      Bug
+      %br
+      = radio_button("feedback", "kind", "idea", :checked => false)
+      Idea
+      %br
+      = radio_button("feedback", "kind", "praise", :checked => false)
+      Praise
     %br
-    %b Name:
-    %br
-    = form.text_field :referer
-  %p 
-    %b Choose Kind:
-    %br
-    = radio_button("feedback", "kind", "bug", :checked => true)
-    Bug
-    %br
-    = radio_button("feedback", "kind", "idea", :checked => false)
-    Idea
-    %br
-    = radio_button("feedback", "kind", "praise", :checked => false)
-    Praise
-    
-  %br
-  
-  %p
-    %b Write a short description:
-    %br
-    = form.text_area :body
-  %p
-    Thank you!  
-  = form.submit "Submit"
+    %p
+      %b Write a short description:
+      %br
+      = form.text_area :body
+    %p
+      Thank you!  
+    = form.submit "Submit"
