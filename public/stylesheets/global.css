@@ -65,3 +65,8 @@ ul#nav {
     padding-left: 135px; }
   #content textarea {
     width: 460px; }
+  #content #articles {
+    padding: 10px; }
+
+#feedback {
+  padding: 10px; }
