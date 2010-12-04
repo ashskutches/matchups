@@ -7,6 +7,9 @@ body {
   font-size: 100%; }
   body h2 {
     padding-left: 5px; }
+  body a {
+    text-decoration: none;
+    color: #696969; }
   body #wrapper {
     margin: 0px auto;
     position: relative;
@@ -34,28 +37,14 @@ ul#nav {
     ul#nav li.last a {
       border-right: none 0px;
       padding-right: 0px; }
-    ul#nav li ul {
-      display: block;
-      padding: 10px 5px;
-      background: white;
-      border: 1px solid #665d4e; }
-      ul#nav li ul li {
-        border: none;
-        display: block;
-        margin-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #665d4e; }
-        ul#nav li ul li:last-child {
-          border: none; }
-        ul#nav li ul li a {
-          border: none;
-          font-size: 14px; }
 
 #characters {
   font-size: 20px;
   padding: 10px;
   width: 490px;
   padding-left: 65px; }
+  #characters h3 {
+    padding-left: 35px; }
   #characters td {
     padding: 5px 40px; }
 

@@ -1,5 +1,5 @@
 #characters
-  %h2 Select your character!
+  %h3 Select your character!
   %table
     - @characters.map(&:name).sort.in_groups_of(2).each do |group|
       %tr
