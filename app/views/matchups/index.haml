@@ -1,11 +1,11 @@
 #content
   %h1 Recent Posts
-    - @matches.each do |match|
-      %ul
-        - match.articles.each do |article|
-          - unless article.body == nil
-            %h3
-              = match.player.name
-              vs
-              = match.opponent.name
-            %li= article.body
+  - @matches.each do |match|
+    %ul
+      - match.articles.each do |article|
+        - unless article.body == nil
+          %h3
+            = match.player.name
+            vs
+            = match.opponent.name
+          %li= article.body
