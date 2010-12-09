@@ -24,19 +24,14 @@ ul#nav {
   padding-left: 235px;
   display: block;
   width: 490px;
-  height: 50px; }
+  height: 25px; }
   ul#nav li {
     display: block;
     float: right; }
     ul#nav li a {
-      font-size: 16px;
+      font-size: 19;
       text-decoration: none;
-      margin-left: 15px;
-      padding-right: 15px;
-      border-right: 1px solid #665d4e; }
-    ul#nav li.last a {
-      border-right: none 0px;
-      padding-right: 0px; }
+      margin-left: 15px; }
 
 #characters {
   font-size: 20px;
