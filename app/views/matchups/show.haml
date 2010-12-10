@@ -11,5 +11,12 @@
           %td
             %p
               =o.body
-  %br
-  = render 'form'
+  - if user_signed_in?
+    %br
+    = render 'form'
+  - else
+    %hr
+    %br
+    Got a tip to post?
+    %b
+      = link_to "Sign In", new_user_registration_path
