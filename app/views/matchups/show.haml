@@ -17,9 +17,9 @@
               %ul
                 %li
                   posted by
-                  = o.user.email
-                  = o.created_at.month
-                  = o.created_at.day
+                  = o.user.email + ":"
+                  = "#{o.created_at.month}" + "-"
+                  = "#{o.created_at.day}" + "-"
                   = o.created_at.year
   - if user_signed_in?
     %br
