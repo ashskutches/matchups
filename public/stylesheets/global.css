@@ -20,6 +20,13 @@ body {
       background: white;
       border: 1px black inset; }
 
+#messages {
+  text-align: center;
+  background-color: #e2eee5;
+  font-weight: bold;
+  margin: 0px auto;
+  width: 300px; }
+
 #topbar {
   margin: 0px auto;
   width: 490px;

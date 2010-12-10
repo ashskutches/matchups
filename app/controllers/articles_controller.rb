@@ -10,9 +10,9 @@ class ArticlesController < ApplicationController
     @article.user = current_user
 
     if @article.save
-      redirect_to(matchup_path(@matchup), :notice => 'Thanks for the tip!')
+      redirect_to(matchup_path(@matchup), :notice => '>>Thanks for the tip!<<')
     else
-      render :action => "new", :notice => @article.errors
+      render :action => 'new', :notice => @article.errors
     end
   end
 

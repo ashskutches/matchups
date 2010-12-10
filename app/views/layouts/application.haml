@@ -9,8 +9,10 @@
         = render :partial => '/layouts/nav'
       #main
         #content
-          = flash[:notice]
-          = flash[:failure]
-          = flash[:success]
+          #messages
+            - if flash.any?
+              =  flash[:notice]
+              = flash[:failure]
+              = flash[:success]
           = yield 
     = render :partial => '/layouts/footer'
