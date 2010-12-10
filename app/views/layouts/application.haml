@@ -5,7 +5,9 @@
     = render :partial => '/layouts/javascript'
   %body
     #wrapper
-      %nav= render :partial => '/layouts/nav'
+      #topbar
+        = render :partial => '/layouts/nav'
       #main
-        = yield 
+        #content
+          = yield 
     = render :partial => '/layouts/footer'

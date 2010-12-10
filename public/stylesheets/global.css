@@ -20,18 +20,16 @@ body {
       background: white;
       border: 1px black inset; }
 
-ul#nav {
-  padding-left: 235px;
-  display: block;
+#topbar {
+  margin: 0px auto;
   width: 490px;
-  height: 25px; }
-  ul#nav li {
-    display: block;
-    float: right; }
-    ul#nav li a {
-      font-size: 19;
-      text-decoration: none;
-      margin-left: 15px; }
+  height: 30px; }
+  #topbar table {
+    font-size: 18px;
+    width: 490px;
+    height: 25px; }
+    #topbar table td#user {
+      text-align: right; }
 
 #characters {
   font-size: 20px;

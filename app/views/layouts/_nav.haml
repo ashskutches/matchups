@@ -1,9 +1,12 @@
-%ul#nav
-  %li.last
+%table
+  %tr
+    %td
+      %a{:href => "/"} TauntWinFree.com
     - if user_signed_in?
-      = current_user.email
-    -else
-      %h1
-        %a{:href => "/users/registration/sign_up"} Sign up / Log in
-  %h1
-    %a{:href => "/"} TauntWinFree.com
+      %td#user
+        = current_user.email
+        %a{:href => "/users/sign_out"} / Sign out
+    - else
+      %td#user
+        %a{:href => "/users/registration/sign_up"} Sign up /
+        %a{:href => "/users/sign_in"} Log In
