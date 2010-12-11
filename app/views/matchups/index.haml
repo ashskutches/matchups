@@ -1,10 +1,14 @@
-%h1 Recent Posts
-- @matches.each do |match|
-  %ul
-    - match.articles.each do |article|
-      - unless article.body == nil
-        %h3
-          = match.player.name
-          vs
-          = match.opponent.name
-        %li= article.body
+- if current_user && current_user.admin == true
+  %h1 Recent Posts
+  - @matches.each do |match|
+    %ul
+      - match.articles.each do |article|
+        - unless article.body == nil
+          %h3
+            = match.player.name
+            vs
+            = match.opponent.name
+          %li= article.body
+- else
+  %h2
+    Hey Your not an Admin!
