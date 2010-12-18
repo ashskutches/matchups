@@ -1,6 +1,6 @@
 class MatchupsController < ApplicationController
   def index
-    @articles = Article.order("created_at ASC").all
+    @articles = Article.order("created_at DESC").all
   end
 
   def show
