@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
     @matchup = Matchup.find_by_id(params[:matchup_id])
     @article = @matchup.articles.new
   end
-  
+
   def create
     @matchup = Matchup.find_by_id(params[:matchup_id])
     @article = @matchup.articles.new(params[:article])
@@ -19,6 +19,6 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    redirect_to(match_path(params[:match_id]))
+    redirect_to matchups_path, :notice => ">>destroyed<<"
   end
 end
