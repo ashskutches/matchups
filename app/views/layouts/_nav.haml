@@ -4,7 +4,7 @@
       %a{:href => "/"} TauntWinFree.com
     - if user_signed_in?
       %td#user
-        = current_user.email
+        = link_to "#{current_user.email}", edit_user_registration_path
         %a{:href => "/users/sign_out"} / Sign out
     - else
       %td#user
