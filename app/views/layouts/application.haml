@@ -7,6 +7,8 @@
     = render :partial => '/layouts/javascript'
   %body
     #wrapper
+      #feedback-button
+        = link_to image_tag("../img/stolenfeedback.jpg"), new_feedback_path
       #topbar
         = render :partial => '/layouts/nav'
       #main

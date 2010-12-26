@@ -10,6 +10,7 @@ class FeedbacksController < ApplicationController
 
   def create
     @feedback = Feedback.new(params[:feedback])
+    @feedback.referer = current_user.email
     if @feedback.save
       flash[:success] = "Thank's for your influential words!"
       redirect_to(root_path) 
