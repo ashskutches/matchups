@@ -25,8 +25,5 @@
   %h3
     %p
       In order to leave feed back you must be logged in.
-    %p
-      Please log in
-      %i
-        = ""
-        = link_to "here", new_user_session_path
+  %p
+    = button_to "Log in", new_user_session_path

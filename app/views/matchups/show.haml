@@ -1,8 +1,8 @@
 #content
-  %h2
-    = @match.player.name
-    vs
-    = @match.opponent.name
+  %h3
+    = image_tag("../img/characters/#{@match.player.name}.jpg")
+    VS 
+    = image_tag("../img/characters/#{@match.opponent.name}.jpg")
   #articles
     - @articles.each do |o|
       %table

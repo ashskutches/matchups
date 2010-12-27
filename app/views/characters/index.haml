@@ -1,11 +1,12 @@
 #characters
   %h3 Select your character!
   %table
-    - @characters.map(&:name).sort.in_groups_of(2).each do |group|
+    - @characters.map(&:name).sort.in_groups_of(12).each do |group|
       %tr
         - group.each do |o|
           %td
-            - o = Character.find_by_name(o)
-            = link_to "#{o.name}", character_path(o.id)
+            - unless o == nil
+              - o = Character.find_by_name(o)
+              = link_to image_tag("../img/characters/#{o.name}.jpg") , character_path(o.id)
   / %br
   / = render 'form'

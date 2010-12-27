@@ -27,7 +27,7 @@ body {
       writing-mode: tb-rl; }
     body #wrapper #main {
       margin: 0px auto;
-      width: 490px;
+      width: 700px;
       background: white;
       border: 1px black inset; }
 
@@ -40,31 +40,41 @@ body {
 
 #topbar {
   margin: 0px auto;
-  width: 490px;
+  width: 700px;
   height: 30px; }
   #topbar table {
     font-size: 18px;
-    width: 490px;
+    width: 700px;
     height: 25px; }
     #topbar table td#user {
       text-align: right; }
 
-#characters {
+#content {
+  padding: 10px;
   font-size: 20px;
   padding: 10px;
   width: 490px;
   padding-left: 65px; }
-  #characters h3 {
-    padding-left: 35px; }
-  #characters td {
-    padding: 5px 40px; }
-
-#content {
-  padding: 10px; }
   #content h2 {
     padding-left: 135px; }
   #content textarea {
     width: 460px; }
+  #content #vs {
+    margin-left: -40px; }
+    #content #vs table {
+      border: 1px solid red; }
+      #content #vs table td {
+        width: 10px;
+        border: 1px solid blue;
+        text-align: left; }
+  #content h2 {
+    padding-left: 235px; }
+  #content #you {
+    padding-left: 250px; }
+  #content h3 {
+    padding-left: 150px; }
+  #content .vs {
+    padding: 0px 20px; }
   #content #articles {
     padding: 10px; }
 
