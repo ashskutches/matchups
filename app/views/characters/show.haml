@@ -1,9 +1,16 @@
 #characters
-  %h2= @character.name
-  #you
-    = image_tag("../img/characters/#{@character.name}.jpg")
-  %h3
-    Choose your opponent!
+  %table
+    %tr
+      %td
+        %h2= @character.name
+    %tr
+      %td
+        #you
+          = image_tag("../img/characters/#{@character.name}.jpg")
+    %tr
+      %td
+        %h3
+          Choose your opponent!
     %i
   %table
     - @matches.sort.each_slice(12) do |group|

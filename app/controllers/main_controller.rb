@@ -4,5 +4,6 @@ class MainController < ApplicationController
   
   def home
     @characters = Character.all
+    @articles = Article.order("created_at DESC").all
   end
 end

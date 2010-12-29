@@ -39,9 +39,13 @@ body {
   width: 300px; }
 
 #topbar {
+  background-color: black;
   margin: 0px auto;
   width: 700px;
   height: 30px; }
+  #topbar a {
+    text-decoration: none;
+    color: white; }
   #topbar table {
     font-size: 18px;
     width: 700px;
@@ -59,6 +63,8 @@ body {
     padding-left: 135px; }
   #content textarea {
     width: 460px; }
+  #content h3 {
+    margin-left: 150px; }
   #content #vs {
     margin-left: -40px; }
     #content #vs table {
@@ -71,12 +77,18 @@ body {
     padding-left: 235px; }
   #content #you {
     padding-left: 250px; }
-  #content h3 {
-    padding-left: 150px; }
   #content .vs {
     padding: 0px 20px; }
   #content #articles {
     padding: 10px; }
+    #content #articles h3 {
+      margin-left: 0px;
+      background: black;
+      color: white;
+      text-align: left; }
+    #content #articles #homepage {
+      text-align: left;
+      margin-left: 75px; }
 
 #feedback {
   padding: 10px; }

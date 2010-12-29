@@ -4,6 +4,7 @@ class CharactersController < ApplicationController
   def index
     @character  = Character.new
     @characters = Character.all
+    @articles = Article.order("created_at DESC").all
   end
 
   # GET /characters/1
