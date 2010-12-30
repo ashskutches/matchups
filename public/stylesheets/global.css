@@ -81,14 +81,6 @@ body {
     width: 460px; }
   #content h3 {
     margin-left: 150px; }
-  #content #vs {
-    margin-left: -40px; }
-    #content #vs table {
-      border: 1px solid red; }
-      #content #vs table td {
-        width: 10px;
-        border: 1px solid blue;
-        text-align: left; }
   #content h2 {
     padding-left: 235px; }
   #content #you {
@@ -104,7 +96,9 @@ body {
       text-align: left; }
     #content #articles #homepage {
       text-align: left;
-      margin-left: 75px; }
+      margin-left: 50px; }
+      #content #articles #homepage table {
+        width: 460px; }
 
 #feedback {
   padding: 10px; }
