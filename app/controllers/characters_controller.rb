@@ -4,7 +4,7 @@ class CharactersController < ApplicationController
   def index
     @character  = Character.new
     @characters = Character.all
-    @articles = Article.order("created_at DESC").all
+    @articles = Article.order("created_at DESC").all(:limit => 5)
   end
 
   # GET /characters/1
