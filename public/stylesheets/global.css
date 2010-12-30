@@ -38,6 +38,22 @@ body {
   margin: 0px auto;
   width: 300px; }
 
+#footer {
+  color: white;
+  background-color: black;
+  margin: 0px auto;
+  width: 700px;
+  height: 40px; }
+  #footer a {
+    text-decoration: none;
+    color: white; }
+  #footer table {
+    font-size: 18px;
+    width: 700px;
+    height: 25px; }
+    #footer table td#user {
+      text-align: right; }
+
 #topbar {
   background-color: black;
   margin: 0px auto;
