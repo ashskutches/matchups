@@ -10,24 +10,22 @@
 %br
 #articles
   #homepage
-    %hr
-      - @articles.each do |article|
-        - unless article == nil
-          %table
-            %tr
-              %td
-                %h3
-                  = article.matchup.player.name
-                  vs
-                  = article.matchup.opponent.name
-            %tr
-              %td
-                %p
-                  = article.body
-            %tr
-              %td
-                %ul
-                  %li
-                    Posted by:
-                    = article.user.email
-          %br
+    - @articles.each do |article|
+      - unless article == nil
+        %table
+          %th
+            %h3
+              = article.matchup.player.name
+              vs
+              = article.matchup.opponent.name
+          %tr
+            %td
+              %p
+                = article.body
+          %tr
+            %td
+              %ul
+                %li
+                  Posted by:
+                  = article.user.email
+        %br

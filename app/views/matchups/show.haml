@@ -4,25 +4,24 @@
     VS 
     = image_tag("../img/characters/#{@match.opponent.name}.jpg")
   #articles
-    %table
-      %tr
-        %h3 General Tips
-      - @articles.each do |o|
-        %tr
-          %td
-            %p
-              = o.body
-        %tr
-          %td
-            %i
-              %ul
-                %li
-                  posted by
-                  = o.user.email + ":"
+    #match
+      %table
+        %th
+          %h3 General Tips
+        - @articles.each do |o|
+          %tr
+            %td
+              %p
+                %i
                   = "#{o.created_at.month}" + "-"
                   = "#{o.created_at.day}" + "-"
                   = o.created_at.year
-                %hr
+                = o.body
+              %i
+                %ul
+                  %li
+                    posted by
+                    = o.user.email + ":"
   - if user_signed_in?
     %br
     = render 'form'
