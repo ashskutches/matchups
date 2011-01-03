@@ -11,11 +11,11 @@
         - @articles.each do |o|
           %tr
             %td
+              %i
+                = "#{o.created_at.month}" + "-"
+                = "#{o.created_at.day}" + "-"
+                = o.created_at.year
               %p
-                %i
-                  = "#{o.created_at.month}" + "-"
-                  = "#{o.created_at.day}" + "-"
-                  = o.created_at.year
                 = o.body
               %i
                 %ul

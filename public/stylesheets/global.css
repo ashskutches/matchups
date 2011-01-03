@@ -105,9 +105,12 @@ body {
     #content #articles #match table {
       width: 460px; }
       #content #articles #match table p {
+        margin: 0px;
         background: #f9f7e8; }
+      #content #articles #match table ul {
+        margin: 0px; }
       #content #articles #match table td {
-        padding-bottom: 10px; }
+        padding-bottom: 30px; }
     #content #articles #homepage {
       margin-left: 50px; }
       #content #articles #homepage table {
