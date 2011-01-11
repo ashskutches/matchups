@@ -4,7 +4,6 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in DeviseMailer.
   config.mailer_sender = "matchups@heroku.com"
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'matchups.heroku.com' }
 
   require 'devise/orm/active_record'
 
