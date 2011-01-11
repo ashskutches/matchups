@@ -72,7 +72,6 @@ body {
 #content {
   padding: 10px;
   font-size: 20px;
-  padding: 10px;
   width: 490px;
   padding-left: 65px; }
   #content h2 {
@@ -83,8 +82,6 @@ body {
     margin-left: 150px; }
   #content h2 {
     padding-left: 235px; }
-  #content #you {
-    padding-left: 250px; }
   #content .vs {
     padding: 0px 20px; }
   #content #articles {
@@ -111,11 +108,23 @@ body {
         margin: 0px; }
       #content #articles #match table td {
         padding-bottom: 30px; }
-    #content #articles #homepage {
-      margin-left: 50px; }
-      #content #articles #homepage table {
-        background: #f9f7e8;
-        width: 460px; }
+    #content #articles #homepage h3 {
+      width: 700px;
+      background: black;
+      color: white;
+      padding: 15px 0px;
+      margin-left: -75px; }
+    #content #articles #homepage table {
+      margin-top: 10px;
+      margin-left: 50px;
+      background: #f9f7e8;
+      width: 460px; }
+      #content #articles #homepage table h3 {
+        padding: 15px 0px; }
+      #content #articles #homepage table th {
+        text-align: center;
+        color: white;
+        background: black; }
 
 #feedback {
   padding: 10px; }

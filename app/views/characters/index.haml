@@ -10,11 +10,12 @@
 %br
 #articles
   #homepage
+    %h3 Recent Posts
     - @articles.each do |article|
       - unless article == nil
         %table
           %th
-            %h3
+            %strong
               = article.matchup.player.name
               vs
               = article.matchup.opponent.name
