@@ -10,6 +10,8 @@ gem 'devise', '1.1.rc0'
 gem 'pg'
 gem 'ruby-debug'
 gem 'haml'
+gem 'hpricot'
+gem 'ruby_parser'
 
 # Use unicorn as the web server
 # gem 'unicorn'

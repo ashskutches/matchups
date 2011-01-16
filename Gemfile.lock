@@ -40,6 +40,7 @@ GEM
     hoptoad_notifier (2.4.2)
       activesupport
       builder
+    hpricot (0.8.3)
     i18n (0.4.1)
     linecache (0.43)
     mail (2.2.7)
@@ -73,6 +74,9 @@ GEM
       ruby-debug-base (~> 0.10.4.0)
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
+    ruby_parser (2.0.5)
+      sexp_processor (~> 3.0)
+    sexp_processor (3.0.5)
     thor (0.14.3)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
@@ -87,6 +91,8 @@ DEPENDENCIES
   devise (= 1.1.rc0)
   haml
   hoptoad_notifier
+  hpricot
   pg
   rails (= 3.0.0)
   ruby-debug
+  ruby_parser

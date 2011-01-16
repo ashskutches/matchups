@@ -21,7 +21,7 @@
                 %ul
                   %li
                     posted by
-                    = o.user.email + ":"
+                    = o.user.name
   - if user_signed_in?
     %br
     = render 'form'
