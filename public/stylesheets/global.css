@@ -85,7 +85,7 @@ body {
   #content .vs {
     padding: 0px 20px; }
   #content #articles {
-    padding: 10px; }
+    padding: 0px 5px; }
     #content #articles h3 {
       background: black;
       color: white;
@@ -109,14 +109,15 @@ body {
       #content #articles #match table td {
         padding-bottom: 30px; }
     #content #articles #homepage {
-      width: 590px;
-      overflow: hidden; }
+      width: 590px; }
+      #content #articles #homepage li {
+        overflow: hidden; }
       #content #articles #homepage h3 {
         width: 700px;
         background: black;
         color: white;
         padding: 15px 0px;
-        margin-left: -75px; }
+        margin-left: -70px; }
 
 #feedback {
   padding: 10px; }
