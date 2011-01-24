@@ -17,9 +17,7 @@
           %li
             %strong
               = link_to image_tag("../img/characters/#{article.matchup.player.name}.jpg") , character_path(article.matchup.player.id)
-              = article.matchup.player.name
-              vs
-              = article.matchup.opponent.name
+              = link_to "#{article.matchup.player.name} vs #{article.matchup.opponent.name}", matchup_path(article.matchup.id)
               = link_to image_tag("../img/characters/#{article.matchup.opponent.name}.jpg") , character_path(article.matchup.opponent.id)
             %p
               = article.body
