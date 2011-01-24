@@ -1,27 +1,39 @@
-#content
-  %h3
+#characters
+  %h2 
+    Your
     = image_tag("../img/characters/#{@match.player.name}.jpg")
-    VS 
-    = image_tag("../img/characters/#{@match.opponent.name}.jpg")
+    Player
+  %h3
+    Choose an Opponent!
+  %table
+    - @matches.sort.each_slice(12) do |group|
+      %tr
+        -group.each do |match|
+          %td
+            - unless match.opponent == nil
+              = link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
+#content
   #articles
     #match
-      %table
-        %th
-          %h3 General Tips
-        - @articles.each do |o|
-          %tr
-            %td
+      %h3
+        = image_tag("../img/characters/#{@match.player.name}.jpg")
+        = @match.player.name
+        VS 
+        = @match.opponent.name
+        = image_tag("../img/characters/#{@match.opponent.name}.jpg")
+      - @articles.each do |o|
+        %ul
+          %li
+            %strong
               %i
                 = "#{o.created_at.month}" + "-"
                 = "#{o.created_at.day}" + "-"
                 = o.created_at.year
-              %p
-                = o.body
-              %i
-                %ul
-                  %li
-                    posted by
-                    = o.user.name
+            %p
+              = o.body
+            %i
+              posted by:
+              = o.user.name
   - if user_signed_in?
     %br
     = render 'form'

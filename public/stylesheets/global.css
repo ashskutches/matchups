@@ -31,6 +31,9 @@ body {
       background: white;
       border: 1px black inset; }
 
+#characters h2 {
+  margin-left: -75px; }
+
 #messages {
   text-align: center;
   background-color: #e2eee5;
@@ -99,15 +102,16 @@ body {
     #content #articles th {
       text-align: left;
       margin-left: 0px; }
-    #content #articles #match table {
-      width: 460px; }
-      #content #articles #match table p {
-        margin: 0px;
-        background: #f9f7e8; }
-      #content #articles #match table ul {
-        margin: 0px; }
-      #content #articles #match table td {
-        padding-bottom: 30px; }
+    #content #articles #match {
+      margin-left: -135px;
+      width: 590px; }
+      #content #articles #match li {
+        overflow: hidden; }
+      #content #articles #match h3 {
+        width: 700px;
+        background: black;
+        color: white;
+        padding: 15px 0px; }
     #content #articles #homepage {
       width: 590px; }
       #content #articles #homepage li {

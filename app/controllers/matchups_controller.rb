@@ -5,6 +5,7 @@ class MatchupsController < ApplicationController
 
   def show
     @match    = Matchup.find(params[:id])
+    @matches   = Matchup.find_all_by_player(@match.player.id)
     @article  = @match.articles.new
     @articles = @match.articles.order("created_at DESC").all
   end
