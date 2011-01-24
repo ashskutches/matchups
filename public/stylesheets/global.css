@@ -108,23 +108,15 @@ body {
         margin: 0px; }
       #content #articles #match table td {
         padding-bottom: 30px; }
-    #content #articles #homepage h3 {
-      width: 700px;
-      background: black;
-      color: white;
-      padding: 15px 0px;
-      margin-left: -75px; }
-    #content #articles #homepage table {
-      margin-top: 10px;
-      margin-left: 50px;
-      background: #f9f7e8;
-      width: 460px; }
-      #content #articles #homepage table h3 {
-        padding: 15px 0px; }
-      #content #articles #homepage table th {
-        text-align: center;
+    #content #articles #homepage {
+      width: 590px;
+      overflow: hidden; }
+      #content #articles #homepage h3 {
+        width: 700px;
+        background: black;
         color: white;
-        background: black; }
+        padding: 15px 0px;
+        margin-left: -75px; }
 
 #feedback {
   padding: 10px; }

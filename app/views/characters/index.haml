@@ -13,20 +13,16 @@
     %h3 Recent Posts
     - @articles.each do |article|
       - unless article == nil
-        %table
-          %th
+        %ul
+          %li
             %strong
+              = link_to image_tag("../img/characters/#{article.matchup.player.name}.jpg") , character_path(article.matchup.player.id)
               = article.matchup.player.name
               vs
               = article.matchup.opponent.name
-          %tr
-            %td
-              %p
-                = article.body
-          %tr
-            %td
-              %ul
-                %li
-                  Posted by:
-                  = article.user.name
-        %br
+              = link_to image_tag("../img/characters/#{article.matchup.opponent.name}.jpg") , character_path(article.matchup.opponent.id)
+            %p
+              = article.body
+              Posted by:
+              %br
+              = article.user.name
