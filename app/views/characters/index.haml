@@ -25,6 +25,7 @@
               = article.body
               %br
                 %i
+                  *
                   Posted by:
                   = article.user.name
                   = ": #{time_ago_in_words(article.created_at)} ago"
