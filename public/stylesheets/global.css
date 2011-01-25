@@ -1,7 +1,7 @@
 /* GENERAL ------------------------------------------------------------ */
 body {
   line-height: 1;
-  color: #696969;
+  color: #4f4f4f;
   background: black url(../img/background.jpg) repeat-x center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 100%; }
@@ -77,14 +77,15 @@ body {
   font-size: 20px;
   width: 490px;
   padding-left: 65px; }
+  #content h1 {
+    padding-left: 25px;
+    width: 600px; }
   #content h2 {
-    padding-left: 135px; }
+    padding-left: 235px; }
   #content textarea {
     width: 460px; }
   #content h3 {
     margin-left: 150px; }
-  #content h2 {
-    padding-left: 235px; }
   #content .vs {
     padding: 0px 20px; }
   #content #articles {
