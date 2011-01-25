@@ -24,5 +24,7 @@
             %p
               = article.body
               %br
-              Posted by:
-              = article.user.name
+                %i
+                  Posted by:
+                  = article.user.name
+                  = ": #{time_ago_in_words(article.created_at)} ago"
