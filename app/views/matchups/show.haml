@@ -26,9 +26,7 @@
           %li
             %strong
               %i
-                = "#{o.created_at.month}" + "-"
-                = "#{o.created_at.day}" + "-"
-                = o.created_at.year
+                = "Posted #{time_ago_in_words(o.created_at)} ago"
             %p
               = o.body
             %i
