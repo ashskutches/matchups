@@ -31,6 +31,8 @@ body {
       background: white;
       border: 1px black inset; }
 
+#characters p {
+  margin-left: 175px; }
 #characters h2 {
   margin-left: -75px; }
 
