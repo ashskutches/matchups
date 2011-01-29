@@ -30,6 +30,8 @@
             %strong
               %i
                 = "Posted #{time_ago_in_words(o.created_at)} ago"
+            - if current_user == o.user
+              = link_to "(Edit)", edit_matchup_article_path(@match.id, o.id)
             %p
               = o.body
             %i

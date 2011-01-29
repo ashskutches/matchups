@@ -16,6 +16,21 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def update
+    @article = Article.find(params[:id])
+    if @article.update_attributes(params[:article])
+      flash[:success] = 'Fight was successfully updated.'
+      redirect_to matchup_path(@article.matchup.id)
+    else
+      render :action => "edit"
+    end
+  end
+
+  def edit
+    @match  = Matchup.find(params[:matchup_id])
+    @article = Article.find(params[:id])
+  end
+
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
