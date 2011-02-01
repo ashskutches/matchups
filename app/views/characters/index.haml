@@ -22,7 +22,7 @@
               = link_to "#{article.matchup.player.name} vs #{article.matchup.opponent.name}", matchup_path(article.matchup.id)
               = image_tag("../img/characters/#{article.matchup.opponent.name}.jpg")
             %p
-              = article.body
+              = raw(article.body)
               %br
                 %i
                   *

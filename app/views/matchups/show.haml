@@ -33,7 +33,7 @@
             - if current_user == o.user
               = link_to "(Edit)", edit_matchup_article_path(@match.id, o.id)
             %p
-              = o.body
+              = raw(o.body)
             %i
               posted by:
               = o.user.name

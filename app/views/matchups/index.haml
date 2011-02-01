@@ -9,7 +9,7 @@
         vs
         = article.matchup.opponent.name
         = button_to "delete", matchup_article_path(article.matchup, article), :method => :delete
-      %li= article.body
+      %li= raw(article.body)
       %li= article.user.name
 - else
   %h2
