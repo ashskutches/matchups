@@ -1,31 +1,30 @@
-%table
-  %h1 Share matchup knowledge and master your favorite game.
-  %h3 Select your character!
-  - @characters.map(&:name).sort.in_groups_of(12).each do |group|
-    %tr
-      - group.each do |o|
-        %td
-          - unless o == nil
-            - o = Character.find_by_name(o)
-            - match = Matchup.find_by_player(o.id)
-            = link_to image_tag("../img/characters/#{o.name}.jpg") , matchup_path(match.id)
+#character_navigation
+  %table
+    %h1 Share matchup knowledge and master your favorite game.
+    %h3 Select your character!
+    - @characters.map(&:name).sort.in_groups_of(12).each do |group|
+      %tr
+        - group.each do |o|
+          %td
+            - unless o == nil
+              - o = Character.find_by_name(o)
+              - match = Matchup.find_by_player(o.id)
+              = link_to image_tag("../img/characters/#{o.name}.jpg") , matchup_path(match.id)
 %br
 #articles
-  #homepage
-    %h3 Recent Posts
-    - @articles.each do |article|
-      - unless article == nil
-        %ul
-          %li
-            %strong
-              = image_tag("../img/characters/#{article.matchup.player.name}.jpg")
-              = link_to "#{article.matchup.player.name} vs #{article.matchup.opponent.name}", matchup_path(article.matchup.id)
-              = image_tag("../img/characters/#{article.matchup.opponent.name}.jpg")
-            %p
-              = raw(article.body)
-              %br
-                %i
-                  *
-                  Posted by:
-                  = article.user.name
-                  = ": #{time_ago_in_words(article.created_at)} ago"
+  %h2 Recent Posts
+  - @articles.each do |article|
+    - unless article == nil
+      %ul
+        %li
+          %h4
+            = image_tag("../img/characters/#{article.matchup.player.name}.jpg")
+            = link_to "#{article.matchup.player.name} vs #{article.matchup.opponent.name}", matchup_path(article.matchup.id)
+            = image_tag("../img/characters/#{article.matchup.opponent.name}.jpg")
+          %p
+            = raw(article.body)
+            %br
+              %i
+                Posted by:
+                = article.user.name
+                = ": #{time_ago_in_words(article.created_at)} ago"

@@ -31,11 +31,6 @@ body
       width: 700px
       background: white
       border: 1px black inset
-#characters
-  p
-    margin-left: 175px
-  h2
-    margin-left: -75px
 #messages
   text-align: center
   background-color: #E2EEE5
@@ -58,6 +53,12 @@ body
     height: 25px
     td#user
       text-align: right
+#character_navigation
+  font-size: 125%
+  text-align: center
+  width: 700px
+  table
+    margin: 0px auto
 
 #topbar
   background-color: black
@@ -75,56 +76,35 @@ body
       text-align: right
 
 #content
-  h1
-    margin-left: -15px
-    padding-left: 0px
-    width: 600px
-  h2
-    padding-left: 235px
-  padding: 10px
-  textarea
-    width: 460px
-  font-size: 20px
-  width: 490px
-  padding-left: 65px
-  h3
-    margin-left: 150px
-  .vs
-    padding: 0px 20px
+  min-height: 700px
+  #user_view
+    width: 550px
+    margin: 50px auto
+    h2
+      text-align: center
   #articles
-    h3
-      background: black
+    ul
+      li
+        width: 625px
+        background-color: #EDEFF4
+        list-style-type: none
+    h2
       color: white
       text-align: center
-      margin: 5px 0px
-      width: 460px
-    padding: 0px 5px
-    p
-      padding: 0px 10px
-    li
-      font-size: 85%
-    th
-      text-align: left
-      margin-left: 0px
-    #match
-      margin-left: -135px
-      width: 590px
-      li
-        overflow: hidden
-      h3
-        width: 700px
-        background: black
-        color: white
-        padding: 15px 0px
-    #homepage
-      width: 590px
-      li
-        overflow: hidden
-      h3
-        width: 700px
-        background: black
-        color: white
-        padding: 15px 0px
-        margin-left: -70px
+      background-color: black
+    h3
+      text-align: center
+      width: 700px
+    hr
+      width: 550px
+    i
+      color: gray
+      font-weight: normal
+      font-size: 13px
+    form
+      width: 600px
+      margin: 0px auto
+      textarea
+        width: 600px
 #feedback
   padding: 10px

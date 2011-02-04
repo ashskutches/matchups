@@ -31,11 +31,6 @@ body {
       background: white;
       border: 1px black inset; }
 
-#characters p {
-  margin-left: 175px; }
-#characters h2 {
-  margin-left: -75px; }
-
 #messages {
   text-align: center;
   background-color: #e2eee5;
@@ -59,6 +54,13 @@ body {
     #footer table td#user {
       text-align: right; }
 
+#character_navigation {
+  font-size: 125%;
+  text-align: center;
+  width: 700px; }
+  #character_navigation table {
+    margin: 0px auto; }
+
 #topbar {
   background-color: black;
   margin: 0px auto;
@@ -75,57 +77,34 @@ body {
       text-align: right; }
 
 #content {
-  padding: 10px;
-  font-size: 20px;
-  width: 490px;
-  padding-left: 65px; }
-  #content h1 {
-    margin-left: -15px;
-    padding-left: 0px;
-    width: 600px; }
-  #content h2 {
-    padding-left: 235px; }
-  #content textarea {
-    width: 460px; }
-  #content h3 {
-    margin-left: 150px; }
-  #content .vs {
-    padding: 0px 20px; }
-  #content #articles {
-    padding: 0px 5px; }
-    #content #articles h3 {
-      background: black;
-      color: white;
-      text-align: center;
-      margin: 5px 0px;
-      width: 460px; }
-    #content #articles p {
-      padding: 0px 10px; }
-    #content #articles li {
-      font-size: 85%; }
-    #content #articles th {
-      text-align: left;
-      margin-left: 0px; }
-    #content #articles #match {
-      margin-left: -135px;
-      width: 590px; }
-      #content #articles #match li {
-        overflow: hidden; }
-      #content #articles #match h3 {
-        width: 700px;
-        background: black;
-        color: white;
-        padding: 15px 0px; }
-    #content #articles #homepage {
-      width: 590px; }
-      #content #articles #homepage li {
-        overflow: hidden; }
-      #content #articles #homepage h3 {
-        width: 700px;
-        background: black;
-        color: white;
-        padding: 15px 0px;
-        margin-left: -70px; }
+  min-height: 700px; }
+  #content #user_view {
+    width: 550px;
+    margin: 50px auto; }
+    #content #user_view h2 {
+      text-align: center; }
+  #content #articles ul li {
+    width: 625px;
+    background-color: #edeff4;
+    list-style-type: none; }
+  #content #articles h2 {
+    color: white;
+    text-align: center;
+    background-color: black; }
+  #content #articles h3 {
+    text-align: center;
+    width: 700px; }
+  #content #articles hr {
+    width: 550px; }
+  #content #articles i {
+    color: gray;
+    font-weight: normal;
+    font-size: 13px; }
+  #content #articles form {
+    width: 600px;
+    margin: 0px auto; }
+    #content #articles form textarea {
+      width: 600px; }
 
 #feedback {
   padding: 10px; }

@@ -1,7 +1,6 @@
 - form_for([@match, @article]) do |o|
+  = o.label :Post
+  %br
+  = o.text_area :body
   %p
-    = o.label :Post
-    %br
-    = o.text_area :body
-    %p
-      = o.submit "Submit", :action => :create
+    = o.submit "Submit", :action => :create
