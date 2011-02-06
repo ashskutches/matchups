@@ -1,0 +1,7 @@
+- if current_user && current_user.admin
+  - @users.each do |user|
+    %ul
+      %li
+        = user.name
+- else
+  %h2 NICE TRY NON ADMIN PERSON!
