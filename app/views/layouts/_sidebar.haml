@@ -1,13 +1,10 @@
-/ sidebar
-#sidebar
-  / side-block
-  %ul.side-block
-    %li= link_to "Characters", characters_path
-    %li
-      %table.side-block
-        - listofcharacters = Character.all.collect {|fighter| fighter.name}
-        - listofcharacters.sort.in_groups_of(2).each do |group|
-          %tr
-            -group.each do |charactername| 
-              %td
-                %a.custom= link_to "#{charactername}", (Character.find_by_name(charactername))
+-if current_user && current_user.admin
+  %h1
+    Admin
+    %hr
+  %h2
+    = link_to "Users", users_path
+    %p
+    = link_to "Posts", matchups_path
+    %p
+    = link_to "Feedback", feedbacks_path

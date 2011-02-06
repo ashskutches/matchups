@@ -38,22 +38,6 @@ body {
   margin: 0px auto;
   width: 300px; }
 
-#footer {
-  color: white;
-  background-color: black;
-  margin: 0px auto;
-  width: 700px;
-  height: 40px; }
-  #footer a {
-    text-decoration: none;
-    color: white; }
-  #footer table {
-    font-size: 18px;
-    width: 700px;
-    height: 25px; }
-    #footer table td#user {
-      text-align: right; }
-
 #character_navigation {
   font-size: 125%;
   text-align: center;
@@ -74,6 +58,47 @@ body {
     width: 700px;
     height: 25px; }
     #topbar table td#user {
+      text-align: right; }
+
+#sidebar {
+  position: fixed;
+  left: 0px;
+  height: 225px;
+  width: 150px;
+  background: white; }
+  #sidebar h1 {
+    font: underline; }
+
+#footer {
+  color: white;
+  background-color: black;
+  margin: 0px auto;
+  width: 700px;
+  height: 40px; }
+  #footer a {
+    text-decoration: none;
+    color: white; }
+  #footer table {
+    font-size: 18px;
+    width: 700px;
+    height: 25px; }
+    #footer table td#user {
+      text-align: right; }
+
+#footer {
+  color: white;
+  background-color: black;
+  margin: 0px auto;
+  width: 700px;
+  height: 40px; }
+  #footer a {
+    text-decoration: none;
+    color: white; }
+  #footer table {
+    font-size: 18px;
+    width: 700px;
+    height: 25px; }
+    #footer table td#user {
       text-align: right; }
 
 #content {
