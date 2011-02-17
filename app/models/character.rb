@@ -15,6 +15,5 @@ class Character < ActiveRecord::Base
       list_char = Character.new(:name => character)
       list_char.save
     end
-
   end
 end

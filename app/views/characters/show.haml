@@ -1,14 +1,28 @@
-#characters
-  %h2 
+-# #character_navigation
+  -# %table
+    -# %h1 Share articleup knowledge and master your favorite game.
+    -# %h3 Select your character!
+    -# - @characters.map(&:name).sort.in_groups_of(12).each do |group|
+      -# %tr
+        -# - group.each do |o|
+          -# %td
+            -# - unless o == nil
+              -# - o = Character.find_by_name(o)
+              -# - article = Matchup.find_by_player(o.id)
+              -# = link_to image_tag("../img/characters/#{o.name}.jpg") , character_path(o)
+#articles
+  %h3 
     Your
-    = image_tag("../img/characters/#{@match.player.name}.jpg")
+    = image_tag("../img/characters/#{@character.name}.jpg")
     Player
   %h3
     Choose an Opponent!
   %table
-    - @matches.sort.each_slice(12) do |group|
+    - @matches.sort.each do |match|
       %tr
-        -group.each do |match|
+        - @articles = match.articles.all
+        - @articles.each do |article|
           %td
-            - unless match.opponent == nil
-              = link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
+          - unless article == nil
+            hi
+            -# = link_to image_tag("../img/characters/#{article.opponent.name}.jpg"), matchup_path(match)

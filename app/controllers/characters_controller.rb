@@ -1,6 +1,5 @@
 class CharactersController < ApplicationController
   def index
-    @character  = Character.new
     @characters = Character.all
     @articles = Article.order("created_at DESC").all(:limit => 5)
   end
@@ -8,6 +7,7 @@ class CharactersController < ApplicationController
   def show
     @character = Character.find(params[:id])
     @matches   = Matchup.find_all_by_player(@character.id)
+    @articles  = Article.find_all_by_user_id(@character.id) 
   end
 
   def new
