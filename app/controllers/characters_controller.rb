@@ -5,9 +5,9 @@ class CharactersController < ApplicationController
   end
 
   def show
+    @characters = Character.all
     @character = Character.find(params[:id])
-    @matches   = Matchup.find_all_by_player(@character.id)
-    @articles  = Article.find_all_by_user_id(@character.id) 
+    @matches   = Matchup.find_all_by_player(@character)
   end
 
   def new
