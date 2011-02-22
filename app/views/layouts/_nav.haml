@@ -1,12 +1,13 @@
 %table
   %tr
     %td
-      %a{:href => "/"} TauntWinFree.com
+      %a{:href => "/"} Matchuptips.com
     - if user_signed_in?
       %td#user
         = link_to "#{current_user.email}", edit_user_registration_path
         %a{:href => "/users/sign_out"} / Sign out
     - else
       %td#user
-        %a{:href => "/users/registration/sign_up"} Sign up /
+        %a{:href => "/users/registration/sign_up"} Sign up
+        = "/"
         %a{:href => "/users/sign_in"} Log In
