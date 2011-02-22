@@ -24,7 +24,6 @@
   - @matches.sort.each do |match|
     - match.articles.each do |article|
       - unless article.body.nil?
-        - @no_articles = true
         %ul
           %li
             %h4
@@ -38,12 +37,4 @@
                   Posted by:
                   = article.user.name
                   = ": #{time_ago_in_words(article.created_at)} ago"
-  // Login/Signup or Post article
-  - unless @no_articles == true
-    %h3
-      No Tips posted yet, be the first!
-      - unless current_user
-        %b
-          = link_to "Sign In", user_session_path
-          = "/  "
-          = link_to "Sign Up", new_user_registration_path
+

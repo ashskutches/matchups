@@ -38,6 +38,7 @@
                 Posted by:
                 = article.user.name
                 = ": #{time_ago_in_words(article.created_at)} ago"
+
   // Login/Signup or Post article
   - if user_signed_in?
     %br
@@ -46,8 +47,8 @@
     - unless @articles.first.nil?
       %hr
     %h3
-      Got a tip to post?
       %b
+        %hr
         = link_to "Sign In", user_session_path
         = "/  "
         = link_to "Sign Up", new_user_registration_path
