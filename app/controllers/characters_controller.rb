@@ -1,13 +1,20 @@
 class CharactersController < ApplicationController
+
   def index
     @characters = Character.all
     @articles = Article.order("created_at DESC").all(:limit => 5)
+    if current_user
+      @likes = Like.where( :user_id => current_user.id )
+    end
   end
 
   def show
     @characters = Character.all
     @character = Character.find(params[:id])
     @matches   = Matchup.find_all_by_player(@character)
+    if current_user
+      @likes = Like.where( :user_id => current_user.id )
+    end
   end
 
   def new

@@ -108,6 +108,11 @@ body {
     margin: 50px auto; }
     #content #user_view h2 {
       text-align: center; }
+  #content #articles #uparrow a {
+    color: #4682b4; }
+  #content #articles #uparrow img {
+    height: 15px;
+    width: 15px; }
   #content #articles ul li {
     width: 625px;
     background-color: #edeff4;

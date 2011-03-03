@@ -33,13 +33,26 @@
             = image_tag("../img/characters/#{article.matchup.opponent.name}.jpg")
             - if current_user && current_user == article.user
               = link_to "(Edit)", edit_matchup_article_path(article.matchup, article)
+          %br
+          %i
+            Posted by:
+            = article.user.name
+            = ": #{time_ago_in_words(article.created_at)} ago"
           %p
             = raw(article.body)
             %br
-              %i
-                Posted by:
-                = article.user.name
-                = ": #{time_ago_in_words(article.created_at)} ago"
+            %p
+              #uparrow
+                - unless article.count_likes == 0 
+                  = image_tag("../img/uparrow.png")
+                = "#{article.count_likes}"
+                - if current_user
+                  - if @likes.where( :article_id => article.id ).any?
+                    =  '- You like this'
+                  - else
+                    = link_to '- Like this', like_path(article)
+                - else 
+                  people like this
 
   // Login/Signup or Post article
   - if user_signed_in?
