@@ -33,7 +33,7 @@
             %br
             %p
               #uparrow
-                - unless article.like_count == 0 
+                - unless article.count_likes == 0 
                   = image_tag("../img/uparrow.png")
                 = "#{article.count_likes}"
                 - if current_user
@@ -43,5 +43,4 @@
                     = link_to '- Like this', like_path(article)
                 - else 
                   people like this
-
 
