@@ -1,5 +1,5 @@
 - if current_user
-  #content
+  #feedback
     %h2 Submit Feedback
     - form_for @feedback do |form|
       %p
@@ -22,8 +22,9 @@
         Thank you!  
       = form.submit "Submit"
 - else
-  %h3
+  #feedback
+    %h3
+      %p
+        In order to leave feed back you must be logged in.
     %p
-      In order to leave feed back you must be logged in.
-  %p
-    = button_to "Log in", new_user_session_path
+      = button_to "Log in", new_user_session_path
