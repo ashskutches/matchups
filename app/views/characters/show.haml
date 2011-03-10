@@ -24,6 +24,7 @@
   - @matches.sort.each do |match|
     - match.articles.each do |article|
       - unless article.body.nil?
+        - @articlesPresent = true
         %ul
           %li
             %h4
@@ -52,3 +53,15 @@
                       = link_to '- Like this', like_path(article)
                   - else 
                     people like this
+  - unless @articlesPresent == true   
+    %br
+    %br
+    %h3 There are no Tips yet, be the first to add one!
+    %br
+    %br
+    %br
+    %br
+    %br
+    %hr
+
+

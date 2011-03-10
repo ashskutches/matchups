@@ -56,14 +56,24 @@
 
   // Login/Signup or Post article
   - if user_signed_in?
-    %br
+    - if @articles.first.nil?
+      %h3 There are no Tips yet, be the first to add one!
     = render 'form'
   - else
+    - if @articles.first.nil?
+      %br
+      %br
+      %h3 There are no Tips yet, be the first to add one!
+      %br
+      %br
+      %br
+      %br
+      %br
+      %hr
     - unless @articles.first.nil?
       %hr
     %h3
       %b
-        %hr
         = link_to "Sign In", user_session_path
         = "/  "
         = link_to "Sign Up", new_user_registration_path
