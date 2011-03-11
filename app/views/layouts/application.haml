@@ -9,9 +9,10 @@
     #wrapper
       #nav
         = render :partial => '/layouts/nav'
-      // sidebar
-      -# = render :partial => '/layouts/leftSidebar'
-      -# = render :partial => '/layouts/leftSidebar'
+      #leftSidebar
+        = render :partial => '/layouts/leftSidebar'
+      #adminSidebar
+        = render :partial => '/layouts/rightSidebar'
       #content
         #messages
           - if flash.any?
@@ -19,6 +20,8 @@
             = flash[:failure]
             = flash[:success]
         = yield 
+      #rightSidebar
+        = render :partial => '/layouts/adminSidebar'
       #footer
         = render :partial => '/layouts/footer'
       #feedback-button
