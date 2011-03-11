@@ -1,25 +1,25 @@
 %html
   %head
-    = csrf_meta_tag
-    %title Matchuptips
     %meta{'name' => "description", :content => 'Learn and share Super Street fighter 4 match tips.'}/
-    = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
+    %title Matchuptips
     = render :partial => '/layouts/javascript'
+    = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
+    = csrf_meta_tag
   %body
     #wrapper
-      #feedback-button
-        = link_to image_tag("../img/stolenfeedback.jpg"), new_feedback_path
-      #topbar
+      #nav
         = render :partial => '/layouts/nav'
       // sidebar
-      = render :partial => '/layouts/sidebar'
-      #main
-        #content
-          #messages
-            - if flash.any?
-              =  flash[:notice]
-              = flash[:failure]
-              = flash[:success]
-          = yield 
+      -# = render :partial => '/layouts/leftSidebar'
+      -# = render :partial => '/layouts/leftSidebar'
+      #content
+        #messages
+          - if flash.any?
+            =  flash[:notice]
+            = flash[:failure]
+            = flash[:success]
+        = yield 
       #footer
         = render :partial => '/layouts/footer'
+      #feedback-button
+        = link_to image_tag("../img/stolenfeedback.jpg"), new_feedback_path
