@@ -2,13 +2,14 @@ Matchups::Application.routes.draw do
   devise_for :users
 
   match "/users", :to => "users#index"
-  match "/article/:id/like", :to => "articles#like", :as => "like"
-  
+  match "/tip/:id/like", :to => "tips#like", :as => "like"
+  match "/tips", :to => "tips#index"
+
   resources :characters
   resources :feedbacks
   resources :matchups do
-    resources :articles
+    resources :tips
   end
-  
+
   root :to => "characters#index"
 end
