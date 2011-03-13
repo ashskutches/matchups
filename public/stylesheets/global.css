@@ -1,1 +1,24 @@
 /* GENERAL ------------------------------------------------------------ */
+body {
+  background: black; }
+
+h1 {
+  margin: 0; }
+
+#logo {
+  float: left; }
+
+#user {
+  float: right; }
+
+#nav {
+  width: 60%;
+  height: 100px;
+  padding: 0 20%;
+  background: red; }
+
+#content {
+  width: 60%;
+  height: 700px;
+  margin: 0 auto;
+  background: white; }
