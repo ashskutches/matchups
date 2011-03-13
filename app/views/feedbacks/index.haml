@@ -1,20 +1,20 @@
 - if current_user && current_user.admin
-  #feedback
-    %h2 Matchup: Feedback List
-    %hr
-    - @feedbacks.each do |feedback|
-      %br
-      %h2
-        = feedback.kind.titleize
-      %p
-        = feedback.body
-      %p
-        *
-        %b= feedback.referer
-        (
-        = feedback.created_at.to_date
-        )
-        %hr
+  %h2 Matchup: Feedback List
+  %hr
+  %ul
+    - feedbacks.each do |feedback|
+      %li
+        %h2
+          = feedback.kind.titleize
+        %p
+          = feedback.body
+        %p
+          *
+          %b= feedback.referer
+          (
+          = feedback.created_at.to_date
+          )
+          %hr
 - else
   %h3
     Hey your not an Admin!

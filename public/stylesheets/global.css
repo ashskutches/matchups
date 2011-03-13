@@ -17,8 +17,14 @@ h1 {
   padding: 0 20%;
   background: red; }
 
+#adminSidebar {
+  color: white;
+  background: blue;
+  position: absolute;
+  left: 0px; }
+
 #content {
   width: 60%;
-  height: 700px;
+  min-height: 700px;
   margin: 0 auto;
   background: white; }

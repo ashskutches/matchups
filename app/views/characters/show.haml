@@ -1,4 +1,4 @@
-%h1 Character name
+%h1= character.name
 %h2 
   How to (name): Tips
 %ul
@@ -12,6 +12,7 @@
 %h2 
   Matchups
 %ul
-  %li vs Tip 1
-  %li vs Tip 2
+- matchups.each do |match|
+  %li
+    = link_to match.opponent.name, matchup_path(match)
 

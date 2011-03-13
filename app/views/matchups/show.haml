@@ -1,5 +1,10 @@
-%h1 Character 1 vs Character 2
+%h1
+  = matchup.player.name
+  Vs
+  = matchup.opponent.name
+
 %h2 Matchup tips
 %ul
-  %li Tip 1
-  %li Tip 2 
+  - tips.each do |tip|
+    %li
+      = tip.body

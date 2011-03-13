@@ -1,10 +1,8 @@
 %h1 Share Street Fighter tips and master all your match-ups.
 #chooseYourCharacter
   %h2 Choose your character!
-  - characters.each do |character|
-    %ul
+  %ul
+    - characters.each do |character|
       %li
-        character
-      %li
-        character
+        = link_to character.name, character_path(character)
 
