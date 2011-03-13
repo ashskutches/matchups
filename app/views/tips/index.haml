@@ -1,0 +1,16 @@
+- if current_user && current_user.admin
+  %h1 Recent Posts
+  %ul
+  - tips.each do |tip|
+    - unless tip.body == nil
+      %li
+        %hr
+        %h3
+          = tip.matchup.player.name
+          vs
+          = tip.matchup.opponent.name
+        = raw(tip.body)
+        = tip.user.name
+- else
+  %h2
+    Hey Your not an Admin!
