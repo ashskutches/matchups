@@ -1,30 +1,9 @@
-- if current_user
-  #feedback
-    %h2 Submit Feedback
-    - form_for @feedback do |form|
-      %p
-        %b Choose Kind:
-        %br
-        = radio_button("feedback", "kind", "bug", :checked => true)
-        Bug
-        %br
-        = radio_button("feedback", "kind", "idea", :checked => false)
-        Idea
-        %br
-        = radio_button("feedback", "kind", "praise", :checked => false)
-        Praise
-      %br
-      %p
-        %b Write a short description:
-        %br
-        = form.text_area :body
-      %p
-        Thank you!  
-      = form.submit "Submit"
-- else
-  #feedback
-    %h3
-      %p
-        In order to leave feed back you must be logged in.
-    %p
-      = button_to "Log in", new_user_session_path
+%h1 Submit Feedback
+%h2 Choose Kind
+%ul
+  %li Bug
+  %li Idea
+  %li Praise
+%p
+  %b Choose Kind:
+  %i Text Area
