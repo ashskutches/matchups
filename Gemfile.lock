@@ -53,6 +53,7 @@ GEM
     cucumber-rails (0.3.2)
       cucumber (>= 0.8.0)
     culerity (0.2.15)
+    decent_exposure (1.0.1)
     devise (1.1.rc0)
       warden (~> 0.10.3)
     diff-lcs (1.1.2)
@@ -60,13 +61,13 @@ GEM
       abstract (>= 1.0.0)
     ffi (0.6.3)
       rake (>= 0.8.7)
-    gherkin (2.3.3)
+    gherkin (2.3.4)
       json (~> 1.4.6)
     haml (3.0.25)
-    hoptoad_notifier (2.4.6)
+    hoptoad_notifier (2.4.7)
       activesupport
       builder
-    hpricot (0.8.3)
+    hpricot (0.8.4)
     i18n (0.4.2)
     json (1.4.6)
     json_pure (1.5.1)
@@ -131,6 +132,7 @@ DEPENDENCIES
   capybara
   cucumber
   cucumber-rails
+  decent_exposure
   devise (= 1.1.rc0)
   haml
   hoptoad_notifier

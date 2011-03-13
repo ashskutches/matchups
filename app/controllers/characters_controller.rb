@@ -1,62 +1,6 @@
 class CharactersController < ApplicationController
+  expose(:characters) { Character.all } 
+  expose(:character)
+  expose(:matchups) { Matchup.find_all_by_player(character)  }
 
-  def index
-    @characters = Character.all
-    @articles = Article.order("created_at DESC").all(:limit => 5)
-    if current_user
-      @likes = Like.where( :user_id => current_user.id )
-    end
-  end
-
-  def show
-    @characters = Character.all
-    @character = Character.find(params[:id])
-    @matches   = Matchup.find_all_by_player(@character)
-    if current_user
-      @likes = Like.where( :user_id => current_user.id )
-    end
-  end
-
-  def new
-    @character = Character.new
-
-  end
-
-  def edit
-    @character = Character.find(params[:id])
-  end
-
-  def create
-    @character = Character.new(params[:character])
-
-    respond_to do |format|
-      if @character.save
-        format.html { redirect_to(characters_path, :notice => 'Character was successfully created.') }
-        format.xml  { render :xml => @character, :status => :created, :location => @character }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @character.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
-    @character = Character.find(params[:id])
-
-    respond_to do |format|
-      if @character.update_attributes(params[:character])
-        format.html { redirect_to(@character, :notice => 'Character was successfully updated.') }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @character.errors, :status => :unprocessable_entity }
-      end
-    end
-  end
-
-  def destroy
-    @character = Character.find(params[:id])
-    @character.destroy
-    redirect_to(characters_path)
-  end
 end

@@ -5,6 +5,7 @@ gem 'rails', '3.0.0'
 gem 'devise', '1.1.rc0'
 gem 'pg'
 gem 'haml'
+gem 'decent_exposure'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
