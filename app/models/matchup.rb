@@ -2,7 +2,7 @@ class Matchup < ActiveRecord::Base
 
   belongs_to :player, :class_name => 'Character', :foreign_key => "player"
   belongs_to :opponent, :class_name => 'Character', :foreign_key => "opponent"
-  has_many :articles
+  has_many :tips
 
   def <=>(b)
     self.opponent.name <=> b.opponent.name

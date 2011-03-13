@@ -1,4 +1,4 @@
-class Article < ActiveRecord::Base
+class Tip < ActiveRecord::Base
  belongs_to :user
  belongs_to :matchup
  has_many :likes

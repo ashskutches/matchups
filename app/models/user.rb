@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   validates_uniqueness_of :name
-  has_many :articles
+  has_many :tips
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :lockable, :timeoutable and :activatable
