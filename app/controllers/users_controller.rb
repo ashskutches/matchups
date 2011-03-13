@@ -1,6 +1,3 @@
 class UsersController < ApplicationController
-  def index
-    @users = User.all
-  end
-
+  expose(:users) { User.all }
 end
