@@ -1,11 +1,12 @@
-#logo
-  %a{:href => "/"} Matchuptips.com
-#user
-  - if user_signed_in?
-    = link_to "#{current_user.email}", edit_user_registration_path
-    %a{:href => "/users/sign_out"} / Sign out
-  - else
-    %a{:href => "/users/registration/sign_up"} Sign up
-    = "/"
-    %a{:href => "/users/sign_in"} Log In
+#nav
+  #logo
+    %a{:href => "/"} Matchuptips.com
+  #user
+    - if user_signed_in?
+      = link_to "#{current_user.email}", edit_user_registration_path
+      %a{:href => "/users/sign_out"} / Sign out
+    - else
+      %a{:href => "/users/registration/sign_up"} Sign up
+      = "/"
+      %a{:href => "/users/sign_in"} Log In
 

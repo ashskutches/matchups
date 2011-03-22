@@ -1,9 +1,48 @@
 /* GENERAL ------------------------------------------------------------ */
 body {
-  background: black; }
+  background: #efefef;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.7em;
+  color: #666666; }
+  body a {
+    text-decoration: none;
+    color: white; }
+    body a:hover {
+      color: #86d01d; }
 
 h1 {
-  margin: 0; }
+  width: 80%;
+  font-size: 30px;
+  color: #321f00;
+  margin: 0 auto;
+  text-shadow: 0 1px 1px white;
+  font-weight: bold;
+  padding: 15px 0;
+  font-weight: bold; }
+
+h2 {
+  width: 80%;
+  font-size: 20px;
+  text-shadow: 0 1px 1px white;
+  margin: 0 auto;
+  padding: 15px 0; }
+
+h3 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0; }
+
+p {
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 0; }
+
+#wrapper {
+  height: 100%;
+  min-height: 800px;
+  width: 100%; }
 
 #logo {
   float: left; }
@@ -11,20 +50,73 @@ h1 {
 #user {
   float: right; }
 
-#nav {
-  width: 60%;
-  height: 100px;
-  padding: 0 20%;
-  background: red; }
+#topbar {
+  background: #2d1900;
+  width: 100%;
+  color: white;
+  height: 46px;
+  margin: 0 auto;
+  border-top: 2px solid #86d01d; }
+  #topbar #nav {
+    color: white;
+    width: 65%;
+    margin: auto auto; }
+
+#homepage {
+  margin: 0 auto;
+  text-align: center; }
 
 #adminSidebar {
   color: white;
-  background: blue;
   position: absolute;
   left: 0px; }
 
 #content {
-  width: 60%;
-  min-height: 700px;
+  width: 65%;
+  min-height: 350px;
+  margin: 50px auto;
+  border: 1px solid #d4d4d4;
+  background: white;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.13); }
+  #content img {
+    width: 62px;
+    height: 75px; }
+  #content li {
+    list-style: none; }
+
+#footer {
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
+  background: url(../img/bg_footer.png) repeat-x;
+  border-bottom: 2px solid #86d01d; }
+
+#copywrap {
+  width: 100%;
+  height: 50px;
+  background: #2d1900;
+  color: white;
+  margin: 0;
+  border-top: 2px solid #2d1c00; }
+
+#chooseYourCharacter {
+  width: 670px;
   margin: 0 auto;
-  background: white; }
+  padding: 4px; }
+  #chooseYourCharacter .linkWithTips {
+    display: inline; }
+    #chooseYourCharacter .linkWithTips img {
+      margin: 0;
+      border: 1px solid #666666; }
+  #chooseYourCharacter li {
+    width: 10%;
+    display: inline; }
+  #chooseYourCharacter img {
+    height: 52px;
+    width: 46px;
+    margin: 1px; }

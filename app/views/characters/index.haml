@@ -1,8 +1,8 @@
-%h1 Share Street Fighter tips and master all your match-ups.
-#chooseYourCharacter
-  %h2 Choose your character!
-  %ul
-    - characters.each do |character|
-      %li
-        = link_to character.name, character_path(character)
-
+#homepage
+  %h1 Share Street Fighter tips and master all your match-ups.
+  %h2 Select your character!
+  #chooseYourCharacter
+    %ul
+      - characters.each do |character|
+        %li
+          = link_to image_tag("../img/characters/#{character.name}.jpg"), character_path(character)
