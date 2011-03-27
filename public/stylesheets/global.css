@@ -67,9 +67,19 @@ p {
   text-align: center; }
 
 #adminSidebar {
-  color: white;
+  background: white;
+  color: #2d1900;
   position: absolute;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
   left: 0px; }
+  #adminSidebar a {
+    color: #2d1900;
+    padding: 0 10px; }
 
 #content {
   width: 65%;
@@ -104,18 +114,23 @@ p {
   margin: 0;
   border-top: 2px solid #2d1c00; }
 
+#accordion a {
+  color: black; }
+  #accordion a:hover {
+    color: #86d01d; }
+
 #chooseYourCharacter {
   width: 670px;
   margin: 0 auto;
   padding: 4px; }
+  #chooseYourCharacter li {
+    width: 10%;
+    display: inline; }
   #chooseYourCharacter .linkWithTips {
     display: inline; }
     #chooseYourCharacter .linkWithTips img {
       margin: 0;
       border: 1px solid #666666; }
-  #chooseYourCharacter li {
-    width: 10%;
-    display: inline; }
   #chooseYourCharacter img {
     height: 52px;
     width: 46px;

@@ -68,9 +68,19 @@ p
   text-align: center
 
 #adminSidebar
-  color: white
+  background: white
+  color: #2D1900
   position: absolute
+  -webkit-border-radius: 5px
+  -khtml-border-radius: 5px
+  -moz-border-radius: 5px
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
   left: 0px
+  a
+    color: #2D1900
+    padding: 0 10px
 
 #content
   width: 65%
@@ -89,6 +99,7 @@ p
     height: 75px
   li
     list-style: none
+  #category
 
 #footer
   width: 100%
@@ -106,19 +117,23 @@ p
   margin: 0
   border-top: 2px solid #2D1C00
 
+#accordion
+  a
+    color: black
+    &:hover
+      color: #86D01D
 #chooseYourCharacter
   width: 670px
   margin: 0 auto
   padding: 4px
+  li
+    width: 10%
+    display: inline
   .linkWithTips
     display: inline
     img
       margin: 0
       border: 1px solid #666
-  li
-  
-    width: 10%
-    display: inline
   img
     height:  52px
     width: 46px
