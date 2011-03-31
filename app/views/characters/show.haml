@@ -2,27 +2,26 @@
   =image_tag("../img/characters/#{character.name}.jpg")
   = character.name
 #accordion
-  %h2= link_to "How to: #{character.name}", '#'
-  #category
-    %ul
-      %li
-        %p Tip 1
-      %li
-        %p Tip 1
-  %h2= link_to "Dealing with: #{character.name}", '#'
-  #category
-    %ul
-      %li
-        %p Tip 1
-      %li
-        %p Tip 1
-  %h2= link_to "Combos", '#'
-  #category
-    %ul
-      %li
-        %p Tip 1
-      %li
-        %p Tip 1
+  -# %h2
+    -# = link_to "Combos", '#'
+    -# - unless combo_tips.empty?
+      -# *
+  -# #category
+    -# %ul.tips
+      -# - unless combo_tips.empty?
+        -# - combo_tips.each do |combo_tip|
+          -# %li
+            -# .userName= combo_tip.user.name
+            -# = ':'
+            -# = time_ago_in_words(combo_tip.created_at)
+            -# ago
+            -# %p.body= combo_tip.body
+      -# - else
+        -# %li
+          -# %strong 
+            -# Click 
+            -# = link_to "here", characters_path
+            -# to post a tip
   %h2= link_to "Matchups", '#'
   #category
     #chooseYourCharacter
@@ -31,4 +30,4 @@
         - unless match.tips.blank?
           %li.linkWithTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
         - else
-          %li=image_tag("../img/characters/#{match.opponent.name}.jpg")
+          %li= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
