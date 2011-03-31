@@ -1,10 +1,27 @@
 %h1
+  = image_tag("../img/characters/#{matchup.player.name}.jpg")
   = matchup.player.name
   Vs
   = matchup.opponent.name
+  = image_tag("../img/characters/#{matchup.opponent.name}.jpg")
 
 %h2 Matchup tips
-%ul
-  - tips.each do |tip|
+%ul.tips
+  - unless tips.empty?
+    - tips.each do |tip|
+      %li
+        .userName= tip.user.name
+        = ':'
+        = time_ago_in_words(tip.created_at)
+        ago
+        %p.body= tip.body
+  - else
     %li
-      %p= tip.body
+      %strong [ There are currently no Tips on this matchup ]
+-if current_user
+  %h3 Got a tip?
+  = render :partial => 'form'
+-else
+  %a{:href => "/users/sign_in"} Sign up / Sign in
+    
+  
