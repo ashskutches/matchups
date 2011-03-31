@@ -1,6 +1,3 @@
-- form_for([@match, @article]) do |o|
-  = o.label :Post
-  %br
+- form_for([character, combo_tip]) do |o|
   = o.text_area :body
-  %p
-    = o.submit "Submit", :action => :create
+  = o.submit "Submit", :action => :create
