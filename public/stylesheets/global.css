@@ -171,11 +171,16 @@ p {
   #chooseYourCharacter li {
     width: 10%;
     display: inline; }
+  #chooseYourCharacter .linkWithoutTips {
+    display: inline; }
+    #chooseYourCharacter .linkWithoutTips img {
+      opacity: 0.5;
+      background: black; }
   #chooseYourCharacter .linkWithTips {
     display: inline; }
     #chooseYourCharacter .linkWithTips img {
       margin: 0;
-      border: 1px dotted #666666; }
+      border: 1px double #666666; }
   #chooseYourCharacter img {
     height: 52px;
     width: 46px;

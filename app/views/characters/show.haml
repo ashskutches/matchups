@@ -30,4 +30,4 @@
         - unless match.tips.blank?
           %li.linkWithTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
         - else
-          %li= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
+          %li.linkWithoutTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
