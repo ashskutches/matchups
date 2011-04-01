@@ -113,6 +113,8 @@ p {
       width: 100%; }
   #content strong {
     font-size: 120%; }
+  #content ul.tips a {
+    color: black; }
   #content ul.tips li {
     width: 85%;
     margin: 25px auto; }
@@ -174,7 +176,7 @@ p {
   #chooseYourCharacter .linkWithoutTips {
     display: inline; }
     #chooseYourCharacter .linkWithoutTips img {
-      opacity: 0.5;
+      opacity: 0.6;
       background: black; }
   #chooseYourCharacter .linkWithTips {
     display: inline; }

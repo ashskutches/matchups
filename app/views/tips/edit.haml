@@ -1,13 +1,14 @@
-#articles
-  = link_to image_tag("../img/characters/#{@match.player.name}.jpg"), matchup_path(@match.player.id)
-  = @match.player.name
-  VS
-  = @match.opponent.name
-  = link_to image_tag("../img/characters/#{@match.opponent.name}.jpg"), matchup_path(@match.player.id)
-  - form_for ([@match, @article]) do |article|
-    %p
-      = @article.body
-    %br
-      = article.label :Body
-      = article.text_area :body
-      = article.submit 'Update', :action => :update
+%h1
+  = image_tag("../img/characters/#{matchup.player.name}.jpg")
+  = matchup.player.name
+  Vs
+  = matchup.opponent.name
+  = image_tag("../img/characters/#{matchup.opponent.name}.jpg")
+
+- form_for ([matchup, tip]) do |article|
+  %p
+    = tip.body
+  %br
+    = article.label :Body
+    = article.text_area :body
+    = article.submit 'Update', :action => :update

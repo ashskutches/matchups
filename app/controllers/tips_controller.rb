@@ -15,7 +15,7 @@ class TipsController < ApplicationController
 
   def destroy
     tip.destroy
-    redirect_to tips_path
+    redirect_to :back
   end
 
 end
