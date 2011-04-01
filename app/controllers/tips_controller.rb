@@ -13,4 +13,9 @@ class TipsController < ApplicationController
     end
   end
 
+  def destroy
+    tip.destroy
+    redirect_to tips_path
+  end
+
 end

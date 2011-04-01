@@ -11,6 +11,7 @@
           = tip.matchup.opponent.name
         = raw(tip.body)
         = tip.user.name
+        = button_to "Delete", matchup_tip_path( tip.matchup, tip), :method => :delete
 - else
   %h2
     Hey Your not an Admin!
