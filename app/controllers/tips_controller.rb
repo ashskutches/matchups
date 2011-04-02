@@ -13,6 +13,17 @@ class TipsController < ApplicationController
     end
   end
 
+
+  def update
+    tip
+    if tip.update_attributes(params[:tip])
+      flash[:success] = 'Tip updated'
+      redirect_to matchup_path(tip.matchup)
+    else
+      render :action => "edit"
+    end
+  end
+
   def destroy
     tip.destroy
     redirect_to :back
