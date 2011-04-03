@@ -8,5 +8,5 @@
     - else
       %a{:href => "/users/registration/sign_up"} Sign up
       = "/"
-      %a{:href => "/users/sign_in"} Log In
+      = link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
 
