@@ -16,7 +16,10 @@
         ago
         - if current_user == tip.user
           = link_to "(Edit)", edit_matchup_tip_path(matchup, tip)
-        %p.body= tip.body
+        - unless tip.user.admin
+          %p.body= tip.body
+        - else
+          %p= raw(tip.body)
   - else
     %li
       %strong [ There are currently no Tips on this matchup ]
