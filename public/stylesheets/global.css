@@ -34,9 +34,20 @@ h3 {
   padding: 15px 0; }
 
 p {
-  width: 80%;
   margin: 0 auto;
   padding: 15px 0; }
+
+.button {
+  color: white;
+  margin: 0;
+  background: #489615;
+  background: -moz-linear-gradient(#84c63c, #489615) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#84c63c), to(#489615));
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
+  font-size: 16px;
+  padding: 8px 16px 12px; }
 
 #wrapper {
   height: 100%;
@@ -165,8 +176,19 @@ p {
   border-bottom: 2px solid #86d01d; }
   #footer #breadcrum {
     height: 70px; }
-  #footer #feedback {
-    height: 300px; }
+  #footer #middleSection {
+    height: 300px;
+    color: #b9af9c; }
+    #footer #middleSection #feedback {
+      margin-right: 50px;
+      text-align: left;
+      float: right; }
+      #footer #middleSection #feedback textarea {
+        background-color: #160e00;
+        height: 100px;
+        border: 1px solid #442b00; }
+      #footer #middleSection #feedback h3 {
+        margin: 0; }
 
 #copywrap {
   width: 100%;
