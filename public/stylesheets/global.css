@@ -59,7 +59,7 @@ p {
     float: left; }
     #user #facebookLoggedIn img {
       float: left; }
-    #user #facebookLoggedIn a {
+    #user #facebookLoggedIn .name {
       background: url(../img/facebook-button-background.png) repeat-x;
       display: inline;
       padding: 5px;
