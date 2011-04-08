@@ -1,4 +1,10 @@
 #footerContent
   #breadcrum
-  #feedback
+  #middleSection
+    #feedback
+      %h3 Feedback?
+      - form_for(feedback) do |o|
+        = o.text_area :body
+        %p
+          = o.submit "Submit", :controller => :feedbacks, :action => :create, :class => :button
 
