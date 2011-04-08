@@ -3,8 +3,10 @@
     %a{:href => "/"} MatchupTips.com
   #user
     - if user_signed_in?
-      #loggedIn= link_to "#{current_user.email}", edit_user_registration_path
-      %a{:href => "/users/sign_out"}  Sign out
+      #facebookLoggedIn
+        = image_tag("../img/facebook-button-logo.png")
+        = link_to "#{current_user.email}", edit_user_registration_path
+      #signOut= link_to "/ Sign Out", "/users/sign_out"
     - else
       = link_to image_tag("../img/facebook-connect-button.png"), user_omniauth_authorize_path(:facebook)
 

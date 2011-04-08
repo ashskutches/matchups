@@ -51,7 +51,21 @@ p {
 #user {
   font-size: 125%;
   padding: 5px 0;
-  float: right; }
+  float: right;
+  overflow: hidden; }
+  #user #facebookLoggedIn {
+    float: left; }
+    #user #facebookLoggedIn img {
+      float: left; }
+    #user #facebookLoggedIn a {
+      background: url(../img/facebook-button-background.png) repeat-x;
+      display: inline;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      float: left; }
+  #user #signOut {
+    padding-top: 8px;
+    float: left; }
 
 #topbar {
   background: #2d1900;
@@ -64,8 +78,6 @@ p {
     color: white;
     width: 65%;
     margin: auto auto; }
-    #topbar #nav #loggedIn {
-      background-image: url(../img/facebook-button.png); }
 
 #homepage {
   margin: 0 auto;
