@@ -179,16 +179,29 @@ p {
   #footer #middleSection {
     height: 300px;
     color: #b9af9c; }
+    #footer #middleSection #facebookLike {
+      height: 200px;
+      color: white;
+      float: left;
+      margin-top: 15px;
+      margin-left: 50px;
+      border-right: 1px solid #442b00; }
     #footer #middleSection #feedback {
+      width: 320px;
+      height: 200px;
+      padding-left: 10px;
+      margin-top: 15px;
       margin-right: 50px;
       text-align: left;
-      float: right; }
+      float: right;
+      border-left: 1px solid #442b00; }
       #footer #middleSection #feedback textarea {
         color: white;
         background-color: #160e00;
         height: 100px;
         border: 1px solid #442b00; }
       #footer #middleSection #feedback h3 {
+        padding: 0;
         margin: 0; }
 
 #copywrap {
