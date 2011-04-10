@@ -61,7 +61,6 @@ p {
 
 #user {
   font-size: 125%;
-  padding: 5px 0;
   float: right;
   overflow: hidden; }
   #user #facebookLoggedIn {
