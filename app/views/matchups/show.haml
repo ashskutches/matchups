@@ -1,9 +1,18 @@
 %h1
-  = image_tag("../img/characters/#{matchup.player.name}.jpg")
-  = matchup.player.name
-  Vs
-  = matchup.opponent.name
-  = image_tag("../img/characters/#{matchup.opponent.name}.jpg")
+  #vs-all
+    #vs-each
+      = image_tag("../img/characters/#{matchup.player.name}.jpg")
+      %p
+        #imgname      
+          = image_tag("../img/names/#{matchup.player.name}.png")
+    #vs-each    
+      = image_tag("/img/vs.png")
+    #vs-each
+      = image_tag("../img/characters/#{matchup.opponent.name}.jpg")
+      %p
+        #imgname
+          = image_tag("../img/names/#{matchup.opponent.name}.png")
+
 
 %h2 Matchup tips
 %ul.tips
