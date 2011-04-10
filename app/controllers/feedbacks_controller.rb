@@ -5,6 +5,8 @@ class FeedbacksController < ApplicationController
   def create
     if current_user
       feedback.referer = current_user.name
+    else
+      feedback.referer = "Guest"
     end
     if feedback.save
       redirect_to :back, :notice => '>> Thanks for the Feedback! <<'
