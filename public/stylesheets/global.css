@@ -121,7 +121,7 @@ p {
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.13); }
-  #content img {
+  #content h1 img {
     width: 62px;
     height: 75px; }
   #content li {
