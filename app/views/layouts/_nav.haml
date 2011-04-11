@@ -1,6 +1,6 @@
 #nav
   #logo
-    %a{:href => "/"} MatchupTips.com
+    = link_to image_tag("/img/matchupslogo.png"), "/"
   #user
     - if user_signed_in?
       #facebookLoggedIn
