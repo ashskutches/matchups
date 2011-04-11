@@ -1,6 +1,14 @@
-%h1
-  =image_tag("../img/characters/#{character.name}.jpg")
-  = character.name
+#vs-all
+  #vs-each
+    %h1
+      =image_tag("../img/characters/#{character.name}.jpg")
+    = image_tag("../img/names/#{character.name}.png", :height => "50%")
+  #vs    
+    = image_tag("/img/vs.png", :height => "200px" )
+  #vs-each
+    %h1
+      = image_tag("../img/characters/#{character.name}.jpg", :style => "opacity:0.0;")
+    = image_tag("../img/names/#{character.name}.png", :height => "50%", :style => "opacity:0.0;")
 #accordion
   -# %h2
     -# = link_to "Combos", '#'
@@ -22,7 +30,7 @@
             -# Click 
             -# = link_to "here", characters_path
             -# to post a tip
-  %h2= link_to "Matchups", '#'
+  %h2
   #category
     #chooseYourCharacter
       %ul

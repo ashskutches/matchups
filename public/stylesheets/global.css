@@ -1,12 +1,29 @@
 /* GENERAL ------------------------------------------------------------ */
+#headline {
+  text-align:center;
+}
+
+#center {
+  text-align:center;
+}
 #vs-each {
   width:200px;
   height:100px;
   display:inline-block;
+  margin-bottom:50px;
 }
-
-#vs-all {
+#vs {
+  width:150px;
+  height:100px;
+  display:inline-block;
   text-align:center;
+  padding:30 10 60 0;
+}
+#vs-all {
+  padding-top:20px;
+  padding-left:30px;
+  text-align:center;
+  margin-bottom:50px;
 }
 
 body {
@@ -41,8 +58,8 @@ h2 {
 h3 {
   width: 80%;
   margin: 0 auto;
-  padding: 15px 0; }
-
+  padding: 15px 0;
+}
 p {
   margin: 0 auto;
   padding: 15px 0; }
@@ -101,9 +118,9 @@ p {
     margin: auto auto; }
 
 #homepage {
-  margin: 0 auto;
-  text-align: center; }
-
+  margin:auto;
+  text-align: center; 
+}
 #adminSidebar {
   background: white;
   color: #2d1900;

@@ -1,20 +1,15 @@
-%h1
-  #vs-all
-    #vs-each
-      = image_tag("../img/characters/#{matchup.player.name}.jpg")
-      %p
-        #imgname      
-          = image_tag("../img/names/#{matchup.player.name}.png")
-    #vs-each    
-      = image_tag("/img/vs.png")
-    #vs-each
+#vs-all
+  #vs-each
+    %h1
+      = image_tag("../img/characters/#{matchup.player.name}.jpg")    
+    = image_tag("../img/names/#{matchup.player.name}.png", :height => "50%")
+  #vs    
+    = image_tag("/img/vs.png", :height => "200px" )
+  #vs-each
+    %h1
       = image_tag("../img/characters/#{matchup.opponent.name}.jpg")
-      %p
-        #imgname
-          = image_tag("../img/names/#{matchup.opponent.name}.png")
+    = image_tag("../img/names/#{matchup.opponent.name}.png", :height => "50%")
 
-
-%h2 Matchup tips
 %ul.tips
   - unless tips.empty?
     - tips.each do |tip|
@@ -30,8 +25,8 @@
         - else
           %p= raw(tip.body)
   - else
-    %li
-      %strong Be the first of your friends to post a Tip!
+  #center
+    %strong Be the first of your friends to post a Tip!
 -if current_user
   %h3 Got a tip?
   = render :partial => 'form'
