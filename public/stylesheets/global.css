@@ -95,6 +95,8 @@ p {
 #homepage {
   margin: 0 auto;
   text-align: center; }
+  #homepage img {
+    height: 150px; }
 
 #adminSidebar {
   background: white;
