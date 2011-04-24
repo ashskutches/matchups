@@ -23,10 +23,9 @@
   - else
     %li
       %strong Be the first of your friends to post a Tip!
--if current_user
-  %h3 Got a tip?
-  = render :partial => 'form'
--else
-  %a{:href => "/users/sign_in"} Sign up / Sign in
-    
+  -if current_user
+    %h3 Got a tip?
+    = render :partial => 'form'
+  -else
+    = link_to "Want to contribute a link? Connect with facebook!", user_omniauth_authorize_path(:facebook)
   
