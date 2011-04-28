@@ -27,5 +27,6 @@
     %h3 Got a tip?
     = render :partial => 'form'
   -else
-    = link_to "Want to contribute a link? Connect with facebook!", user_omniauth_authorize_path(:facebook)
+    Want to contribute a tip?
+    %b= link_to "Connect with facebook!", user_omniauth_authorize_path(:facebook)
   
