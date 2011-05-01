@@ -8,7 +8,6 @@ gem 'haml'
 gem 'decent_exposure'
 gem 'jquery-rails'
 gem "oa-oauth", :require => "omniauth/oauth"
-gem 'festivaltts4r'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
