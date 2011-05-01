@@ -2,6 +2,10 @@ class Character < ActiveRecord::Base
   has_many :matchups, :foreign_key => 'player_id'
   has_many :matchups, :foreign_key => 'opponent_id'
 
+  def <=>(b)
+    self.created_at <=> b.created_at
+  end
+
   def all_tips
     matchups =  Matchup.find_all_by_player(self)
       all_ma_tips = []
@@ -10,6 +14,7 @@ class Character < ActiveRecord::Base
           all_ma_tips << tip
         end
       end
+      all_ma_tips.sort! { |a,b| b.created_at <=> a.created_at  }
       return all_ma_tips
   end
 
