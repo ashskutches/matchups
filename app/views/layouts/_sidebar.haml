@@ -11,13 +11,13 @@
         - randomTips.each do |tip|
           %li
             %h4
-              .spacer= tip.matchup.player.name
-              .spacer= tip.matchup.opponent.name
-            =image_tag("../img/characters/#{tip.matchup.player.name}.jpg")
+              .spacer=link_to tip.matchup.player.name, matchup_path(tip.matchup)
+              .spacer=link_to tip.matchup.opponent.name, matchup_path(tip.matchup)
+            =link_to image_tag("../img/characters/#{tip.matchup.player.name}.jpg"), matchup_path(tip.matchup)
             Vs
-            =image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg")
+            =link_to image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg"), matchup_path(tip.matchup)
             %hr
-            %p= truncate(tip.body, :length => 45, :omission => "...")
+            %p=link_to truncate(tip.body, :length => 45, :omission => "..."), matchup_path(tip.matchup)
 #sidebarSection
   #alternating
     #feedback

@@ -204,6 +204,8 @@ ul.tips {
   display: inline;
   float: right;
   min-height: 550px; }
+  #sidebar a {
+    color: black; }
   #sidebar #sidebarSection {
     float: right;
     width: 100%;
