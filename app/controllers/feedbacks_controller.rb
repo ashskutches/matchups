@@ -1,7 +1,6 @@
 class FeedbacksController < ApplicationController
   expose(:feedback)
   expose(:feedbacks) { Feedback.all }
-  expose(:randomTips) { Tip.find(:all, :order => "RANDOM()", :limit => 2) } 
 
   def create
     if current_user
