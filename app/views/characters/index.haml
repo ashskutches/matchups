@@ -12,9 +12,9 @@
     - tips.each do |tip|
       %li
         %h3
-          = tip.matchup.player.name
+          = link_to tip.matchup.player.name, matchup_path(tip.matchup)
           = link_to image_tag("../img/characters/#{tip.matchup.player.name}.jpg"), matchup_path(tip.matchup)
           VS
           = link_to image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg"), matchup_path(tip.matchup)
-          = tip.matchup.opponent.name
+          = link_to tip.matchup.opponent.name, matchup_path(tip.matchup)
         %p= tip.body
