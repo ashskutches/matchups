@@ -1,7 +1,7 @@
 /* GENERAL ------------------------------------------------------------
 
 body
-  background: #EFEFEF
+  background: black
   margin: 0
   font-family: Arial, Helvetica, sans-serif
   font-size: 14px
@@ -19,7 +19,6 @@ h1
   margin: 0 auto
   text-shadow: 0 1px 1px white
   font-weight: bold
-  padding: 15px 0
   font-weight: bold
 
 h2
@@ -27,16 +26,33 @@ h2
   font-size: 20px
   text-shadow: 0 1px 1px white
   margin: 0 auto
-  padding: 15px 0
 
 h3
   width: 80%
   margin: 0 auto
-  padding: 15px 0
 
 p
+  width: 80%
   margin: 0 auto
-  padding: 15px 0
+
+li
+  width: 80%
+  list-style: none
+
+hr
+  width: 80%
+  margin: 0 auto
+  width: 80%
+
+form
+  width: 80%
+  margin: 10px auto
+  textarea
+    background: #F9F9F9
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1)
+    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1)
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1)
+    width: 100%
 
 .button
   color: white
@@ -48,20 +64,17 @@ p
   -moz-box-shadow: 0 3px rgba(0, 0, 0, 0.1),0 -4px rgba(0, 0, 0, 0.1) inset
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1),0 -4px rgba(0, 0, 0, 0.1) inset
   font-size: 16px
-  padding: 8px 16px 12px
-
+  padding: 4px 8px 6px
 
 #wrapper
-  height: 100%
-  min-height: 800px
+  background: black url(../img/background2.jpg) no-repeat center
+  min-height: 850px
   width: 100%
 
 #logo
   font-size: 130%
   padding: 5px 0
   float: left
-  img
-    height: 80%
 
 #user
   font-size: 125%
@@ -83,22 +96,35 @@ p
     float: left
 
 #topbar
-  background: #2D1900
   width: 100%
   color: white
-  height: 46px
-  margin: 0 auto
-  border-top: 2px solid #86D01D
+  height: 95px
+  background: black
+  -webkit-border-radius: 5px
+  -khtml-border-radius: 5px
+  -moz-border-radius: 5px
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
   #nav
+    width: 80%
+    height: 75%
+    display: block
     color: white
-    width: 65%
+    border-bottom: 2px ridge white
+    margin: auto auto
+  #secondaryNav
+    width: 80%
+    border-top: 2px inset white
+    height: 22%
+    display: block
     margin: auto auto
 
-#homepage
+#section2
+  width: 90%
   margin: 0 auto
-  text-align: center
-  img
-    height: 150px
+  padding-bottom: 10px
+  background-color: #D0D0D0
 
 #adminSidebar
   background: white
@@ -115,10 +141,16 @@ p
     color: #2D1900
     padding: 0 10px
 
-#content
-  width: 65%
-  min-height: 350px
-  margin: 50px auto
+#contentContainer
+  width: 1000px
+  margin: 0 auto
+  display: block
+
+#midsection
+  float: left
+  width: 100%
+  margin: 0 auto
+  min-height: 550px
   border: 1px solid #D4D4D4
   background: white
   -webkit-border-radius: 5px
@@ -127,46 +159,96 @@ p
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.13)
+
+#content
+  float: left
+  width: 70%
+  text-align: center
+  display: inline
   h1
     img
       width: 62px
       height: 75px
+
+ul.tips
+  width: 80%
+  img
+    height: 150px
+    width: 62px
+    height: 75px
+  a
+    color: black
   li
-    list-style: none
-  form
-    width: 80%
-    margin: 10px auto
-    textarea
-      background: #F9F9F9
-      box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1)
-      -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1)
-      -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1)
-      padding: 2px
+    width: 85%
+    margin: 25px auto
+    .userName
+      display: inline
+      color: #2D1900
+    img
+      width: 62px
+      height: 75px
+    p
+      color: #666
       width: 100%
-  strong
-    font-size: 120%
-  ul.tips
-    a
-      color: black
-    li
-      width: 85%
-      margin: 25px auto
-      .userName
-        display: inline
-        color: #2D1900
-      p
-        color: #666
-        width: 90%
-        background: white
-        border: 1px solid #CCC
-        border-radius: 20px
-        -moz-border-radius: 20px
-        -webkit-border-radius: 20px
-        box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
-        -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
-        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
-        padding: 20px
-        position: relative
+      background: white
+      border: 1px solid #CCC
+      border-radius: 20px
+      -moz-border-radius: 20px
+      -webkit-border-radius: 20px
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+      -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+      -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+      padding: 20px
+
+#sidebar
+  text-align: center
+  width: 260px
+  display: inline
+  float: right
+  min-height: 550px
+  #sidebarSection
+    float: right
+    width: 100%
+    margin-top: 10px
+    margin-bottom: 10px
+    margin-right: 10px
+    min-height: 100px
+    border-radius: 20px
+    -moz-border-radius: 20px
+    -webkit-border-radius: 20px
+    clear: both
+    #alternating
+      background: #F0F0F0
+    h3
+      width: 100%
+      background: #686868
+      color: white
+      -webkit-border-radius: 5px
+      -khtml-border-radius: 5px
+      -moz-border-radius: 5px
+    h4
+      margin: 2px 5px
+    img
+      width: 35px
+      height: 40px
+    clear: both
+
+#facebookLike
+  padding: 10px
+  width: 100%
+
+#feedback
+  width: 100%
+  textarea
+    color: white
+    background-color: #160E00
+    height: 100px
+    border: 1px solid #442B00
+  h3
+  .button
+    width: 100%
+    margin-top: 25px
+    margin-right: -10px
 
 #messages
   color: white
@@ -176,58 +258,28 @@ p
   font-size: 150%
 
 #footer
+  float: left
   width: 100%
-  height: 300px
+  height: 100px
   margin-top: 80px
-  background: url(../img/bg_footer.png) repeat-x
-  border-bottom: 2px solid #86D01D
   #breadcrum
     height: 70px
   #middleSection
     height: 300px
     color: #B9AF9C
-    #facebookLike
-      height: 200px
-      color: white
-      float: left
-      margin-top: 15px
-      margin-left: 50px
-      border-right: 1px solid #442B00
-    #feedback
-      width: 320px
-      height: 200px
-      padding-left: 10px
-      margin-top: 15px
-      margin-right: 50px
-      text-align: left
-      float: right
-      border-left: 1px solid #442B00
-      textarea
-        color: white
-        background-color: #160E00
-        height: 100px
-        border: 1px solid #442B00
-      h3
-        padding: 0
-        margin: 0
 
 #copywrap
+  float: left
   width: 100%
   height: 50px
-  background: #2D1900
+  background: black
   color: white
   margin: 0
-  border-top: 2px solid #2D1C00
+  border-top: 2px solid white
 
-#accordion
-  a
-    color: black
-    &:hover
-      color: #86D01D
 #chooseYourCharacter
-  width: 670px
+  width: 100%
   margin: 0 auto
-  padding: 4px
   li
     width: 10%
     display: inline
@@ -245,3 +297,8 @@ p
     height:  52px
     width: 46px
     margin: 1px
+
+.spacer
+  margin: 10px
+  display: inline
+

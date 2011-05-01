@@ -8,5 +8,6 @@
         .name= current_user.name
       #signOut= link_to " Sign Out", "/users/sign_out"
     - else
-      = link_to image_tag("../img/facebook-connect-button.png"), user_omniauth_authorize_path(:facebook)
-
+      #facebookLoggedIn
+        = image_tag("../img/facebook-button-logo.png")
+        .name= link_to "Login with Facebook", user_omniauth_authorize_path(:facebook)

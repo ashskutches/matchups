@@ -1,9 +1,20 @@
-#homepage
-  = image_tag("/img/sf4logo.jpg", :height => "20%")
-  %h1 Share Tips About Your Favorite Character!
-  %h2 Select your character!
-  #chooseYourCharacter
-    %ul
+= image_tag("/img/sf4logo.jpg")
+%h1 Select your character!
+#chooseYourCharacter
+  %ul
     - characters.each do |character|
       %li
         = link_to image_tag("../img/characters/#{character.name}.jpg"), character_path(character)
+#section2
+  %h2 Recent Tips
+  %hr
+  %ul.tips
+    - tips.each do |tip|
+      %li
+        %h3
+          = tip.matchup.player.name
+          = link_to image_tag("../img/characters/#{tip.matchup.player.name}.jpg"), matchup_path(tip.matchup)
+          VS
+          = link_to image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg"), matchup_path(tip.matchup)
+          = tip.matchup.opponent.name
+        %p= tip.body

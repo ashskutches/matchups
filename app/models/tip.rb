@@ -3,7 +3,6 @@ class Tip < ActiveRecord::Base
  belongs_to :matchup
  has_many :likes
 
-
  def count_likes
    unless self.like_count
     return 0

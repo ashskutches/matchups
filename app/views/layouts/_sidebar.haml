@@ -1,0 +1,29 @@
+#sidebarSection
+  #alternating
+    %h3 Matchuptips.com ~ Facebook
+    #facebookLike
+      <iframe src="http://www.facebook.com/plugins/like.php?href=matchuptips.com&amp;send=false&amp;layout=standard&amp;width=240&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:80px;" allowTransparency="true"></iframe>
+#sidebarSection
+  #alternating
+    %h3 Random Tips
+    - unless tips.empty?
+      %ul
+        - randomTips.each do |tip|
+          %li
+            %h4
+              .spacer= tip.matchup.player.name
+              .spacer= tip.matchup.opponent.name
+            =image_tag("../img/characters/#{tip.matchup.player.name}.jpg")
+            Vs
+            =image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg")
+            %hr
+            %p= truncate(tip.body, :length => 45, :omission => "...")
+#sidebarSection
+  #alternating
+    #feedback
+      %h3 Feedback?
+      - form_for(feedback) do |o|
+        = o.text_area :body
+        %p
+          = o.submit "Submit", :controller => :feedbacks, :action => :create, :class => :button
+

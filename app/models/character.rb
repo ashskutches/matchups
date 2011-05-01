@@ -2,6 +2,16 @@ class Character < ActiveRecord::Base
   has_many :matchups, :foreign_key => 'player_id'
   has_many :matchups, :foreign_key => 'opponent_id'
 
+  def all_tips
+    matchups =  Matchup.find_all_by_player(self)
+      all_ma_tips = []
+      matchups.each do |match|
+        match.tips.each do |tip|
+          all_ma_tips << tip
+        end
+      end
+      return all_ma_tips
+  end
 
   def character_list
 

@@ -1,41 +1,28 @@
-#vs-all
-  #vs-each
-    %h1
-      =image_tag("../img/characters/#{character.name}.jpg")
-    = image_tag("../img/names/#{character.name}.png", :height => "50%")
-  #vs    
-    = image_tag("/img/vs.png", :height => "200px" )
-  #vs-each
-    %h1
-      = image_tag("../img/characters/#{character.name}.jpg", :style => "opacity:0.0;")
-    = image_tag("../img/names/#{character.name}.png", :height => "50%", :style => "opacity:0.0;")
-#accordion
-  -# %h2
-    -# = link_to "Combos", '#'
-    -# - unless combo_tips.empty?
-      -# *
-  -# #category
-    -# %ul.tips
-      -# - unless combo_tips.empty?
-        -# - combo_tips.each do |combo_tip|
-          -# %li
-            -# .userName= combo_tip.user.name
-            -# = ':'
-            -# = time_ago_in_words(combo_tip.created_at)
-            -# ago
-            -# %p.body= combo_tip.body
-      -# - else
-        -# %li
-          -# %strong 
-            -# Click 
-            -# = link_to "here", characters_path
-            -# to post a tip
-  %h2
-  #category
-    #chooseYourCharacter
-      %ul
-      - matchups.each do |match|
-        - unless match.tips.blank?
-          %li.linkWithTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
-        - else
-          %li.linkWithoutTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
+%h1
+  =image_tag("../img/characters/#{character.name}.jpg")
+= image_tag("../img/names/#{character.name}.png", :height => "10%")
+= image_tag("../img/vs.png", :height => "10%")
+%h2 Matchups
+#chooseYourCharacter
+  %ul
+  - matchups.each do |match|
+    - unless match.tips.blank?
+      %li.linkWithTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
+    - else
+      %li.linkWithoutTips= link_to image_tag("../img/characters/#{match.opponent.name}.jpg"), matchup_path(match)
+#headerImages
+#section2
+  %h2 RecentTips
+  %hr
+  - unless characterTips.empty?
+    %ul.tips
+      - characterTips.each do |tip|
+        %li
+          %h3
+            VS
+            = tip.matchup.opponent.name
+            =image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg")
+          %p= tip.body
+  - else
+    %br
+    %h3 Select an opponent and be the first to post a tip!

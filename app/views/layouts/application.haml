@@ -10,15 +10,20 @@
     #wrapper
       #topbar
         = render :partial => '/layouts/nav'
+        = render :partial => '/layouts/secondaryNav'
       #adminSidebar
         = render :partial => '/layouts/adminSidebar'
-      #content
-        #messages
-          - if flash.any?
-            =  flash[:notice]
-            = flash[:failure]
-            = flash[:success]
-        = yield 
+      #contentContainer
+        #midsection
+          #content
+            #messages
+              - if flash.any?
+                =  flash[:notice]
+                = flash[:failure]
+                = flash[:success]
+            = yield 
+          #sidebar
+            = render :partial => '/layouts/sidebar'
       #footer
         = render :partial => '/layouts/footer'
       #copywrap
