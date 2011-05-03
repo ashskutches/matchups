@@ -1,6 +1,6 @@
 /* GENERAL ------------------------------------------------------------ */
 body {
-  background: black;
+  background: black url(../img/background2.jpg) no-repeat center;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -66,7 +66,6 @@ form {
   padding: 4px 8px 6px; }
 
 #wrapper {
-  background: black url(../img/background2.jpg) no-repeat center;
   min-height: 850px;
   width: 100%; }
 
