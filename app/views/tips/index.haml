@@ -6,12 +6,12 @@
       %li
         %hr
         %h3
-          = tip.matchup.player.name
+          = tip.player
           vs
-          = tip.matchup.opponent.name
+          = tip.opponent
         = raw(tip.body)
         = tip.user.name
-        = button_to "Delete", matchup_tip_path( tip.matchup, tip), :method => :delete
+        = button_to "Delete", tip_path( tip), :method => :delete
 - else
   %h2
     Hey Your not an Admin!
