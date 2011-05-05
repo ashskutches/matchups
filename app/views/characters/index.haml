@@ -12,9 +12,13 @@
     - tips.each do |tip|
       %li
         %h3
-          = link_to tip.matchup.player.name, matchup_path(tip.matchup)
-          = link_to image_tag("../img/characters/#{tip.matchup.player.name}.jpg"), matchup_path(tip.matchup)
+          = link_to tip.player, character_path(Character.find_by_name(tip.player))
+          = link_to image_tag("../img/characters/#{tip.player}.jpg"), character_path(Character.find_by_name(tip.player))
           VS
-          = link_to image_tag("../img/characters/#{tip.matchup.opponent.name}.jpg"), matchup_path(tip.matchup)
-          = link_to tip.matchup.opponent.name, matchup_path(tip.matchup)
-        %p= tip.body
+          = link_to image_tag("../img/characters/#{tip.opponent}.jpg"), character_path(Character.find_by_name(tip.opponent))
+          = link_to tip.opponent, character_path(Character.find_by_name(tip.opponent))
+        %p=link_to truncate(tip.body, :length => 100, :omission => "....."), tip_path(tip)
+#comments
+  %h2 Comments
+  %hr
+  <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="matchuptips.com" num_posts="5" width="550"></fb:comments>

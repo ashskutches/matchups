@@ -7,9 +7,7 @@ Matchups::Application.routes.draw do
 
   resources :characters
   resources :feedbacks
-  resources :matchups do
-    resources :tips
-  end
+  resources :tips
 
   root :to => "characters#index"
 end

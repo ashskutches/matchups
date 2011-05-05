@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110415045626) do
+ActiveRecord::Schema.define(:version => 20110504005204) do
 
   create_table "articles", :force => true do |t|
     t.text     "body"
@@ -51,13 +51,6 @@ ActiveRecord::Schema.define(:version => 20110415045626) do
     t.datetime "updated_at"
   end
 
-  create_table "matchups", :force => true do |t|
-    t.integer  "player"
-    t.integer  "opponent"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "tips", :force => true do |t|
     t.text     "body"
     t.integer  "matchup_id"
@@ -65,6 +58,8 @@ ActiveRecord::Schema.define(:version => 20110415045626) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "like_count", :default => 0
+    t.string   "player"
+    t.string   "opponent"
   end
 
   create_table "users", :force => true do |t|
