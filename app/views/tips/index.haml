@@ -1,5 +1,6 @@
 - if current_user && current_user.admin
   %h1 Recent Posts
+  %h2= tips.count
   %ul
   - tips.each do |tip|
     - unless tip.body == nil
