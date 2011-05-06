@@ -1,4 +1,8 @@
 - if current_user && current_user.admin
+  %h1 
+    Users
+    = users.count
+    %hr
   %ul
     - users.each do |user|
       %li
