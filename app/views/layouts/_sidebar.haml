@@ -4,6 +4,11 @@
     #facebookLike
       <iframe src="http://www.facebook.com/plugins/like.php?href=matchuptips.com&amp;send=false&amp;layout=standard&amp;width=240&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:80px;" allowTransparency="true"></iframe>
 #sidebarSection
+  #tipSubmit
+    %h3 Got a tip?
+    %p Don't hold out on us! Share the goods. Its easy! 
+    = link_to "Add a tip", new_tip_path, :class => :button
+#sidebarSection
   #alternating
     %h3 Random Tips
     - unless randomTips.empty?

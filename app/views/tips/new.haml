@@ -1,0 +1,17 @@
+#addTip
+  %h1 Share a tip
+  %br
+  - unless current_user
+    %p 
+      In order to add a tip you need to log into facebook.
+    = link_to "Login to Facebook.", user_omniauth_authorize_path(:facebook), :class => :button
+  - else
+    - form_for tip do |o|
+      %h2
+        = o.select :player, options_for_select(characterNames, selected = nil)
+        Player
+        Opponent
+        = o.select :opponent, options_for_select(characterNames, selected = nil)
+      %p
+        = o.text_area :body
+        = o.submit "Submit", :action => :create, :class => :button

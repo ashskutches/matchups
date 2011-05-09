@@ -2,20 +2,22 @@ class TipsController < ApplicationController
   expose(:tips) { Tip.all }
   expose(:matchup)
   expose(:tip)
+  expose(:characterNames) { Character.all.collect { |character| character.name } }
 
   def create
-    tip.matchup_id = matchup.id
-    tip.user = current_user
-    if tip.save
-      redirect_to(matchup_path(matchup), :notice => '>>Thanks for the tip!<<')
+    if current_user
+      tip.user_id = current_user.id
+      if tip.save
+        redirect_to root_path, :notice => 'Thanks for the tip.'
+      else
+        render :action => 'new', :notice => tip.errors
+      end
     else
-      render :action => 'new', :notice => tip.errors
+      redirect_to :back, :notice => 'You have to be logged into add a tip!'
     end
   end
 
-
   def update
-    tip
     if tip.update_attributes(params[:tip])
       flash[:success] = 'Tip updated'
       redirect_to matchup_path(tip.matchup)

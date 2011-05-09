@@ -3,7 +3,6 @@ Matchups::Application.routes.draw do
 
   match "/users", :to => "users#index"
   match "/tip/:id/like", :to => "tips#like", :as => "like"
-  match "/tips", :to => "tips#index"
 
   resources :characters
   resources :feedbacks
