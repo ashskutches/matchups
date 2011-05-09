@@ -56,9 +56,8 @@ form {
 .button {
   color: white;
   margin: 0;
-  background: #489615;
-  background: -moz-linear-gradient(#84c63c, #489615) repeat scroll 0 0 transparent;
-  background: -webkit-gradient(linear, left top, left bottom, from(#84c63c), to(#489615));
+  background: -moz-linear-gradient(#ff9933, #ff7f24) repeat scroll 0 0 transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff9933), to(#ff7f24));
   box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
   -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
@@ -109,11 +108,11 @@ form {
     height: 75%;
     display: block;
     color: white;
-    border-bottom: 2px ridge white;
+    border-bottom: 2px ridge #ff9933;
     margin: auto auto; }
   #topbar #secondaryNav {
     width: 1000px;
-    border-top: 2px inset white;
+    border-top: 2px inset #ff9933;
     height: 22%;
     display: block;
     margin: auto auto; }
@@ -226,6 +225,11 @@ ul.tips {
       -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
       padding: 20px; }
+    ul.tips li p:hover {
+      -webkit-transition: background-color 0.5s ease-in-out;
+      -moz-transition: background-color 0.5s ease-in-out;
+      -o-transition: background-color 0.5s ease-in-out;
+      background: #ff9933; }
     ul.tips li h3 {
       padding-left: 40px; }
 
@@ -237,32 +241,44 @@ ul.tips {
   min-height: 550px; }
   #sidebar a {
     color: black; }
-  #sidebar #sidebarSection {
-    float: right;
+
+#sidebarSection {
+  float: right;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  min-height: 100px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  clear: both; }
+  #sidebarSection #alternating {
+    background: #f0f0f0; }
+  #sidebarSection h3 {
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    min-height: 100px;
-    border-radius: 20px;
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
-    clear: both;
-    clear: both; }
-    #sidebar #sidebarSection #alternating {
-      background: #f0f0f0; }
-    #sidebar #sidebarSection h3 {
-      width: 100%;
-      background: #686868;
-      color: white;
-      -webkit-border-radius: 5px;
-      -khtml-border-radius: 5px;
-      -moz-border-radius: 5px; }
-    #sidebar #sidebarSection h4 {
-      margin: 2px 5px; }
-    #sidebar #sidebarSection img {
-      width: 35px;
-      height: 40px; }
+    background: #686868;
+    color: white;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -moz-border-radius: 5px; }
+  #sidebarSection h4 {
+    margin: 2px 5px; }
+  #sidebarSection img {
+    width: 35px;
+    height: 40px; }
+  #sidebarSection li:hover {
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    background: #ff9933; }
+
+#tipSubmit .button {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  color: white;
+  padding: none; }
 
 #facebookLike {
   padding: 10px;
@@ -276,7 +292,6 @@ ul.tips {
     height: 100px;
     border: 1px solid #442b00; }
   #feedback .button {
-    width: 100%;
     margin-top: 25px;
     margin-right: -10px; }
 
