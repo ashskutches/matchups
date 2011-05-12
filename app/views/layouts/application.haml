@@ -3,7 +3,12 @@
     %meta{'name' => "description", :content => 'Learn and share Super Street fighter 4 match tips.'}/
     %meta{'name' => "keywords", :content => 'Super Street Fighter 4, vs, versus, how to beat, matchups'}/
     %meta{'property' => 'fb:admins', :content => '500705660'}/
-    %title Matchuptips
+    %title 
+      Matchuptips
+      - if defined? character
+        = character.name
+      - if defined? tip
+        = "#{tip.player} vs #{tip.opponent}"
     = csrf_meta_tag
     = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
     = javascript_include_tag 'jquery', 'jquery-ui', 'application'
