@@ -130,7 +130,7 @@ form {
 
 #comments {
   width: 80%;
-  margin: 50px auto;
+  margin: 25px auto;
   overflow: hidden; }
   #comments hr {
     width: 100%;
@@ -236,6 +236,9 @@ ul.tips {
       background: #ff9933; }
     ul.tips li h3 {
       padding-left: 40px; }
+
+#addTip {
+  margin: 5px 0; }
 
 #sidebar {
   text-align: center;
