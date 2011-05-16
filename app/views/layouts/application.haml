@@ -4,10 +4,12 @@
     %meta{'name' => "keywords", :content => 'Super Street Fighter 4, vs, versus, how to beat, matchups'}/
     %meta{'property' => 'fb:admins', :content => '500705660'}/
     %title 
-      - if defined? character
-        = character.name
-      - if defined? tip
-        = "#{tip.player} vs #{tip.opponent}"
+      - if params[:id] && defined? tip
+        = "#{tip.player} vs #{tip.opponent} tips. All Super Street Fighter 4 match tips in one place"
+      - elsif params[:id]
+        = "#{character.name} tips. All Super Street Fighter 4 match tips in one place. "
+      - else
+        All Super Street Fighter match tips in one place.
     = csrf_meta_tag
     = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
     = javascript_include_tag 'jquery', 'jquery-ui', 'application'
