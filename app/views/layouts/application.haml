@@ -5,11 +5,11 @@
     %meta{'property' => 'fb:admins', :content => '500705660'}/
     %title 
       - if params[:id] && defined? tip
-        = "#{tip.player} vs #{tip.opponent} tips. Super Street Fighter 4 match tips in one place | matchuptips.com"
+        = "#{tip.player} vs #{tip.opponent} tips | Super Street Fighter 4 match tips | matchuptips.com"
       - elsif params[:id]
-        = "#{character.name} tips. Super Street Fighter 4 match tips in one place | matchuptips.com "
+        = "#{character.name} tips. Super Street Fighter 4 match tips | matchuptips.com "
       - else
-        Super Street Fighter match tips in one place | matchuptips.com
+        Super Street Fighter match tips | matchuptips.com
     = csrf_meta_tag
     = stylesheet_link_tag 'global.css', :rel => 'stylesheet', :type => 'text/css'
     = javascript_include_tag 'jquery', 'jquery-ui', 'application'
