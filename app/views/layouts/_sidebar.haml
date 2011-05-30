@@ -24,7 +24,7 @@
             %hr
             %p=link_to truncate(tip.body, :length => 45, :omission => "..."), tip_path(tip)
 #sidebarSection
-  #feedback
+  #sidebarFeedback
     %h3 Feedback?
     - form_for(feedback) do |o|
       = o.text_area :body

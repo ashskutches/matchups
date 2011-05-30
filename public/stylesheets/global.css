@@ -285,18 +285,23 @@ ul.tips {
   color: white;
   padding: none; }
 
+#feedback {
+  text-align: left; }
+  #feedback li {
+    margin: 25px 0; }
+
 #facebookLike {
   padding: 10px;
   width: 100%; }
 
-#feedback {
+#sidebarFeedback {
   width: 100%; }
-  #feedback textarea {
+  #sidebarFeedback textarea {
     color: white;
     background-color: #160e00;
     height: 100px;
     border: 1px solid #442b00; }
-  #feedback .button {
+  #sidebarFeedback .button {
     margin-top: 25px;
     margin-right: -10px; }
 
