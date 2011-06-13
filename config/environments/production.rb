@@ -1,5 +1,5 @@
 Matchups::Application.configure do
-  config.action_mailer.default_url_options = { :host => 'matchups.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'matchuptips.com' }
   # Settings specified here will take precedence over those in config/environment.rb
 
   # The production environment is meant for finished, "live" apps.
