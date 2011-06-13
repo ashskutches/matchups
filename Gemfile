@@ -16,7 +16,6 @@ group :development do
   gem 'ruby-debug'
   gem 'hpricot'
   gem 'ruby_parser'
-  gem 'itslog'
 end
 
 group :test do
