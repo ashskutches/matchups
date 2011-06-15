@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'hoptoad_notifier'
 gem 'rails', '3.0.0'
-gem 'devise'
+gem 'devise', '1.2.1'
 gem 'pg'
 gem 'haml'
 gem 'decent_exposure'
@@ -16,6 +16,7 @@ group :development do
   gem 'ruby-debug'
   gem 'hpricot'
   gem 'ruby_parser'
+  gem 'itslog'
 end
 
 group :test do
