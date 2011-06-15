@@ -7,7 +7,7 @@ gem 'pg'
 gem 'haml'
 gem 'decent_exposure'
 gem 'jquery-rails'
-gem "oa-oauth", :require => "omniauth/oauth"
+gem "oa-oauth", '0.2.0', :require => "omniauth/oauth"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
