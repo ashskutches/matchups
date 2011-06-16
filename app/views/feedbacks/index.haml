@@ -1,4 +1,4 @@
-- unless current_user && current_user.admin
+- if current_user && current_user.admin
   %h2 Matchup: Feedback List
   %hr
   #feedback
