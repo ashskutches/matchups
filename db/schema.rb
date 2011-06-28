@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110504005204) do
+ActiveRecord::Schema.define(:version => 20110628062141) do
 
   create_table "articles", :force => true do |t|
     t.text     "body"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(:version => 20110504005204) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.integer  "like_count", :default => 0
+  end
+
+  create_table "blogs", :force => true do |t|
+    t.text     "body"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_url"
   end
 
   create_table "character_tips", :force => true do |t|
@@ -47,6 +55,13 @@ ActiveRecord::Schema.define(:version => 20110504005204) do
   create_table "likes", :force => true do |t|
     t.integer  "user_id"
     t.integer  "tip_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "matchups", :force => true do |t|
+    t.integer  "player"
+    t.integer  "opponent"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
