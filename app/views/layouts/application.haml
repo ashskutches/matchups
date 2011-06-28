@@ -6,7 +6,7 @@
     %title 
       - if params[:id] && defined? tip
         = "#{tip.player} vs #{tip.opponent} tips | Super Street Fighter 4 match tips | matchuptips.com"
-      - elsif params[:id]
+      - elsif params[:id] && defined? character
         = "#{character.name} tips. Super Street Fighter 4 match tips | matchuptips.com "
       - else
         Super Street Fighter 4 match tips | matchuptips.com
