@@ -1,7 +1,7 @@
 class CharactersController < ApplicationController
-  expose(:characters) { Character.order("name ASC") } 
-  expose(:character)
+  expose(:characters) { Character.new.character_list } 
+  expose(:character) { params[:name] }
   expose(:tips) { Tip.order("created_at desc").limit(5) }
-  expose(:characterTips) { character.all_tips }
+  expose(:characterTips) { Tip.where(:player => character) }
 
 end
