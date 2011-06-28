@@ -1,0 +1,15 @@
+#blog
+  %h2 New Blog
+  - form_for blog do |o|
+    %p
+      = o.label :title
+      %br
+      = o.text_field :title
+    %p
+      = o.label :body
+      = o.text_area :body
+    %p
+      = o.label :image_url
+      %br
+      = o.text_field :image_url
+    = o.submit "Submit", :action => :create, :class => :button

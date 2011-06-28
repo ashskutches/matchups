@@ -1,0 +1,16 @@
+#blog
+  - if current_user && current_user.admin
+    = link_to 'New Blog', new_blog_path, :class => :button, :style => "float: right; clear:both; background: black; color: white"
+  %ul
+    - blogs.each do |blog|
+      %li
+        - if current_user && current_user.admin
+          = link_to 'Edit', edit_blog_path(blog)
+          |
+          = link_to "Delete", blog_path(blog), :method => :delete, :confirm => "Yea?"
+        %h2= link_to blog.title, blog_path(blog)
+        #blogContent
+          = link_to image_tag("../img/#{blog.image_url}"), blog_path(blog)
+          %p= truncate(blog.body, :length => 350, :omission => " read more..")
+#comments
+  <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="matchuptips.com" num_posts="5" width="550"></fb:comments>
