@@ -3,10 +3,12 @@ Matchups::Application.routes.draw do
 
   match "/users", :to => "users#index"
   match "/tip/:id/like", :to => "tips#like", :as => "like"
+  match "/characters", :to => "characters#index"
+  match "/characters/:name", :to => "characters#show", :as => :character_show
 
-  resources :characters
+  resources :blogs
   resources :feedbacks
   resources :tips
 
-  root :to => "characters#index"
+  root :to => "blogs#index"
 end
