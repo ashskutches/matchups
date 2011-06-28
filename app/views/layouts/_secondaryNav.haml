@@ -1,3 +1,12 @@
 #secondaryNav
-  %nav
-    = link_to "Homepage", root_path
+  %ul
+    %li= link_to "Homepage", root_path
+    %li.dropdown
+      = link_to "Character", characters_path
+      -# %ul.characterNavigation
+        -# - characters.each do |char| 
+          -# %li
+            -# = char.name
+            -# = link_to image_tag("../img/characters/#{char.name}.jpg"), character_path(char)
+
+
