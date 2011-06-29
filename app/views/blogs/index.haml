@@ -7,7 +7,7 @@
         - if current_user && current_user.admin
           = link_to 'Edit', edit_blog_path(blog)
           |
-          = link_to "Delete", blog_path(blog), :method => :delete, :confirm => "Yea?"
+          = button_to "Delete", blog_path(blog), :method => :delete, :confirm => "Yea?"
         %h2= link_to blog.title, blog_path(blog)
         #blogContent
           = link_to image_tag("../img/#{blog.image_url}"), blog_path(blog)
