@@ -15,4 +15,9 @@ class FeedbacksController < ApplicationController
     end
   end
 
+  def destroy
+    feedback.destroy
+    redirect_to :back
+  end
+
 end

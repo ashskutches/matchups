@@ -1,4 +1,4 @@
-- if current_user && current_user.admin
+- if current_user && current_user.admin?
   %h2 Matchup: Feedback List
   %hr
   #feedback
@@ -7,11 +7,11 @@
         %li
           %h3
             %b= feedback.referer
+            = button_to "Remove", feedback_path(feedback), :method => :delete, :style => "float: right;"
             (
             = feedback.created_at.to_date
             )
           %p
             = feedback.body
 - else
-  %h3
-    Hey your not an Admin!
+  %h2 Your not an admin!
