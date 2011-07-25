@@ -318,10 +318,7 @@ ul.tips {
     margin: 10px 0;
     width: 95%;
     border-bottom: 1px dotted black;
-    padding: 10px;
-    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.1); }
+    padding: 10px; }
   #blog a {
     color: black; }
   #blog h2 {
