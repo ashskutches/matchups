@@ -1,25 +1,38 @@
 %h1
   =image_tag("/img/characters/#{character}.jpg")
   = character
-#section2
-  %h2 Tips
-  %hr
-  - unless characterTips.empty?
-    %ul.tips
-      - characterTips.each do |tip|
-        %li
-          %h3
-            = link_to tip.player, character_show_path(tip.player)
-            = link_to image_tag("../img/characters/#{tip.player}.jpg"), character_show_path(tip.player)
-            VS
-            = link_to image_tag("../img/characters/#{tip.opponent}.jpg"), character_show_path(tip.opponent)
-            = link_to tip.opponent, character_show_path(tip.opponent)
+- unless characterTips.empty?
+  %ul.tips
+    - characterTips.each do |tip|
+      %li
+        = link_to image_tag("../img/characters/#{tip.opponent}.jpg"), character_show_path(tip.opponent)
+        %h2
+          VS
+          = link_to tip.opponent, character_show_path(tip.opponent)
+        #tipContent
           %p=link_to truncate(tip.body, :length => 150, :omission => "....."), tip_path(tip)
-          .userName= tip.user.name
-          = ':'
-          = time_ago_in_words(tip.created_at)
-          ago
-  - else
-    %br
-    %h3 No tips yet? Be the first and add at tip here.
-    = link_to 'Add a tip', new_tip_path, :class => :button
+          %p
+            = tip.user.name
+            = ':'
+            = time_ago_in_words(tip.created_at)
+            ago
+- else
+  %br
+  %h3 No tips yet? Be the first and add at tip here.
+  = link_to 'Add a tip', new_tip_path, :class => :button
+- unless opponentTips.empty?
+  %hr{ :style => "margin: 2em auto" }
+  %ul.tips
+    - opponentTips.each do |tip|
+      %li
+        = link_to image_tag("../img/characters/#{tip.player}.jpg"), character_show_path(tip.player)
+        %h2
+          VS
+          = link_to tip.opponent, character_show_path(tip.opponent)
+        #tipContent
+          %p=link_to truncate(tip.body, :length => 150, :omission => "....."), tip_path(tip)
+          %p
+            = tip.user.name
+            = ':'
+            = time_ago_in_words(tip.created_at)
+            ago
