@@ -21,7 +21,7 @@
   %h3 No tips yet? Got one? Be the first and and add a tip!
   = link_to 'Add a tip', new_tip_path, :class => :button
 - unless opponentTips.empty?
-  %hr{ :style => "margin: 2em auto" }
+  %h2{ :style => "margin: 2em auto" } What are your opponents up to?
   %ul.tips
     - opponentTips.each do |tip|
       %li
