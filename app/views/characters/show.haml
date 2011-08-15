@@ -3,7 +3,7 @@
   = character
 %h2
   - form_tag (search_path, :multipart => true) do
-    = select_tag("player", options_for_select(characterNames, params[:player]))
+    = select_tag("player", options_for_select(characterNames, character))
     vs
     = select_tag("opponent", options_for_select(characterNames, params[:opponent]))
     = submit_tag "Go", :class => :button
