@@ -6,9 +6,7 @@ class SearchController < ApplicationController
   # Takes the input of the "/:search" url and re-directs to the corresponding URL.
   def input
     if params[:player] && params[:opponent]
-      player = params[:player].gsub(/ /,'%20')
-      opponent = params[:opponent].gsub(/ /,'%20')
-      redirect_to "/characters/#{player}/vs#{opponent}"
+      redirect_to tip_search_path(params[:player], params[:opponent])
     else
       redirect_to "/"
     end
