@@ -3,7 +3,7 @@ class TipsController < ApplicationController
   expose(:matchup)
   expose(:tip)
   expose(:characterTips) { Tip.where(:player => tip.player, :opponent => tip.opponent).reject { |x| x == tip } }
-  expose(:characterNames) { Character.new.character_list }
+  expose(:characterNames) { Character.character_list }
 
   def create
     if current_user
