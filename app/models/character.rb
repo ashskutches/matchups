@@ -5,10 +5,10 @@ class Character < ActiveRecord::Base
   end
 
   def self.character_list
-   ['Ryu','Ken','Adon','Sagat','Chun Li','Blanka','E Honda','Guile','Dhalsim',
-    'Zangief','Balrog','Vega','M Bison','T Hawk','Cammy','Fei Long','Dee Jay',
-    'Akuma','Guy','Rose','Sakura','Dan','Cody','Dudley','Ibuki','Makoto',
-    'C Viper','Abel','El Fuerte','Rufus','Seth','Gouken','Juri','Hakan','Evil Ryu','Oni','Yang','Yun'].sort!
+   [ 'Ryu','Ken','E Honda','Ibuki','Makoto','Dudley','Seth','Gouken','Akuma','Gen','Dan','Sakura','Oni',
+     'Yun','Juri','Chun Li','Dhalsim','Abel','C Viper','M Bison','Sagat','Cammy','Dee Jay','Cody','Guy','Hakan','Yang',
+    'Evil Ryu','Guile','Blanka','Zangief','Rufus','El Fuerte','Vega','Balrog','Fei Long','T Hawk','Adon','Rose'
+    ]
   end
 
 end

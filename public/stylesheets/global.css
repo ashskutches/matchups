@@ -443,8 +443,12 @@ ul.tips {
   border-top: 2px solid white; }
 
 #chooseYourCharacter {
-  width: 100%;
+  width: 110%;
   margin: 0 auto; }
+  #chooseYourCharacter ul {
+    margin-left: 4 !important;
+    padding-left: 0 !important;
+    text-align: left; }
   #chooseYourCharacter li {
     width: 10%;
     display: inline; }

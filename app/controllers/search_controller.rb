@@ -1,6 +1,6 @@
 class SearchController < ApplicationController
   expose(:character) { params[:player] }
-  expose(:characterNames) { Character.character_list }
+  expose(:characterNames) { Character.character_list.sort! }
   expose(:opponentTips) { Tip.where(:opponent => character) }
 
   # Takes the input of the "/:search" url and re-directs to the corresponding URL.

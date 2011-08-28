@@ -3,5 +3,23 @@
 #chooseYourCharacter
   %ul
     - characters.each do |character|
-      %li
-        = link_to image_tag("../img/characters/#{character.humanize.titleize}.jpg"), character_show_path(character.humanize.titleize)
+      - if character == "Yang"
+        %li
+          = link_to image_tag("../img/characters/#{character.humanize.titleize}.jpg"), character_show_path(character.humanize.titleize)
+      - elsif character == "Yun"
+        %br
+        %li
+          = link_to image_tag("../img/characters/#{character.humanize.titleize}.jpg"), character_show_path(character.humanize.titleize)
+      - elsif character == "Ryu"
+        %li{:style => "margin-left: 25px"}
+          = link_to image_tag("../img/characters/#{character.humanize.titleize}.jpg"), character_show_path(character.humanize.titleize)
+      - elsif character == "Evil Ryu"
+        %br
+        %li{:style => "margin-left: 40px"}
+          = link_to image_tag("../img/characters/#{character.humanize.titleize}.jpg"), character_show_path(character.humanize.titleize)
+      - else
+        %li
+          = link_to image_tag("../img/characters/#{character.humanize.titleize}.jpg"), character_show_path(character.humanize.titleize)
+
+
+        
