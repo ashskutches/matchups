@@ -26,7 +26,8 @@
             ago
 - else
   %br
-  %h3 No tips yet? Got one? Be the first and add a tip!
+  %h3 Oh, it looks like there aren't any tips yet!
+  %p Got a tip? Be the first one to add a tip here!
   = link_to 'Add a tip', new_tip_path, :class => :button
 - unless opponentTips.empty?
   %h2{ :style => "margin: 2em auto" } What are your opponents up to?
