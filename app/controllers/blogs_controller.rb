@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   expose(:blog)
-  expose(:blogs) { Blog.order("created_at desc").limit(3) }
+  expose(:blogs) { Blog.order("created_at desc").limit(10) }
 
   def create
     if blog.save
