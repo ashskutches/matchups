@@ -5,16 +5,20 @@ class TipsController < ApplicationController
   expose(:characterTips) { Tip.where(:player => tip.player, :opponent => tip.opponent).reject { |x| x == tip } }
   expose(:characterNames) { Character.character_list.sort! }
 
+  def new
+    session[:return_to] = request.referer
+  end
+
   def create
     if current_user
       tip.user_id = current_user.id
       if tip.save
-        redirect_to root_path, :notice => 'Thanks for the tip.'
+        redirect_to session[:return_to], :notice => 'Thanks for the tip.'
       else
         render :action => 'new', :notice => tip.errors
       end
     else
-      redirect_to :back, :notice => 'You have to be logged into add a tip!'
+      redirect_to session[:return_to], :notice => 'You have to be logged in to add tips!'
     end
   end
 
