@@ -268,7 +268,7 @@ ul.tipsRandom p {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  padding: 20px; }
+  padding: 15px; }
 ul.tipsRandom p:hover {
   -webkit-transition: background-color 0.5s ease-in-out;
   -moz-transition: background-color 0.5s ease-in-out;
@@ -305,6 +305,11 @@ ul.tips {
     -webkit-border-radius: 3px;
     -khtml-border-radius: 3px;
     -moz-border-radius: 3px; }
+  ul.tips li:hover {
+    -webkit-transition: background-color 0.5s ease-in-out;
+    -moz-transition: background-color 0.5s ease-in-out;
+    -o-transition: background-color 0.5s ease-in-out;
+    background: #ff9933; }
 
 #tipContent {
   width: 100%; }
