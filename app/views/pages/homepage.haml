@@ -1,13 +1,7 @@
 #blog
-  - if current_user && current_user.admin
-    = link_to 'New Blog', new_blog_path, :class => :button, :style => "float: right; clear:both; background: black; color: white"
   %ul
     - blogs.each do |blog|
       %li
-        - if current_user && current_user.admin
-          = link_to 'Edit', edit_blog_path(blog)
-          |
-          = button_to "Delete", blog_path(blog), :method => :delete, :confirm => "Yea?"
         %h2= link_to blog.title, blog_path(blog)
         #blogContent
           = link_to image_tag("../img/#{blog.image_url}"), blog_path(blog)
