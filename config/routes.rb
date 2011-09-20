@@ -7,6 +7,7 @@ Matchups::Application.routes.draw do
   match "/characters/:name", :to => "characters#show", :as => :character_show
   match "/characters/:player/vs:opponent", :to => "search#tips", :as => :tip_search
   match "/search", :to => "search#input", :as => :search
+  match "/stream", :to => "pages#stream"
   match "/", :to => "pages#homepage"
 
   resources :blogs
